@@ -1,5 +1,4 @@
 import axios from 'axios';
-import readline from 'readline';
 import startListener from './listener.js';
 
 const DLMM_API      = 'https://dlmm.datapi.meteora.ag';
@@ -8,6 +7,7 @@ const SORT_BY       = 'fee_24h:desc';      // top performance: pools dgn fee 24h
 const FILTER_BY     = 'is_blacklisted=false';
 const MIN_TVL       = 1000;                  // minimal TVL $1K hindari pool sampah
 const IGNORE_TOKENS = ['USDC', 'USDT', 'HYPE'];
+const TOP_N         = 2;                     // ambil 2 pool teratas
 
 function fmtUsd(n) {
   if (n == null || !Number.isFinite(Number(n))) return '-';
@@ -56,7 +56,7 @@ async function main() {
   const pools = await fetchTopPools();
   if (pools.length === 0) { console.error('  No pools found'); process.exit(1); }
 
-  // If --pool arg provided, skip interactive menu
+  // Jika --pool=1,2,3 specified, ambil pool by index
   if (poolArg) {
     const nums = poolArg.split('=')[1].split(',').map(Number).filter(n => n>=1 && n<=pools.length);
     if (nums.length === 0) { console.error('  Invalid pool numbers'); process.exit(1); }
@@ -67,25 +67,19 @@ async function main() {
     return;
   }
 
-  // Interactive mode
+  // Default: auto-select top 2 pools
+  const selected = pools.slice(0, TOP_N);
   console.log('');
-  pools.forEach((p,i) => {
+  console.log('  Auto-selected top '+TOP_N+' pools:');
+  selected.forEach((p,i) => {
     console.log('  '+(i+1)+'. '+p.name+
       '  Fee 24h: '+fmtUsd(p.fee_24h)+
       '  APR: '+fmtPct(p.apr)+
       '  TVL: '+fmtUsd(p.tvl)+
       '  Vol: '+fmtUsd(p.volume_24h));
   });
-
-  const rl = readline.createInterface({ input:process.stdin, output:process.stdout });
-  const answer = await new Promise(r => rl.question('\n  Pilih nomor pool (1-5) atau 0 keluar: ', r));
-  rl.close();
-
-  const choice = parseInt(answer, 10);
-  if (!choice || choice<1 || choice>pools.length) { console.log('  Bye.'); process.exit(0); }
-  const selected = pools[choice-1];
-  console.log('\n  >> Memilih: '+selected.name+' ('+selected.address.slice(0,20)+'...)\n');
-  await startListener([selected]);
+  console.log('');
+  await startListener(selected);
 }
 
 main();
