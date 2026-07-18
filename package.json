@@ -1,0 +1,14 @@
+{
+  "name": "meteora-wallet-collector",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node index.js",
+    "analyze": "node analyze.js"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.98.4",
+    "axios": "^1.7.9"
+  }
+}
