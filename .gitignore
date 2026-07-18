@@ -4,3 +4,4 @@ node_modules/
 logs/
 collected-wallets.json
 wallet-analysis.json
+trending-pools.json

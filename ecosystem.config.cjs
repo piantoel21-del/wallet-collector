@@ -3,6 +3,7 @@ module.exports = {
     {
       name: 'wallet-collector',
       script: 'index.js',
+      args: '--pool=1,2',
       cwd: __dirname,
       interpreter: 'node',
       env: {
