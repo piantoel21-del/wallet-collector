@@ -7,7 +7,7 @@ const SORT_BY       = 'fee_24h:desc';      // top performance: pools dgn fee 24h
 const FILTER_BY     = 'is_blacklisted=false';
 const MIN_TVL       = 1000;                  // minimal TVL $1K hindari pool sampah
 const IGNORE_TOKENS = ['USDC', 'USDT', 'HYPE'];
-const TOP_N         = 2;                     // ambil 2 pool teratas
+const TOP_N         = 3;                     // ambil 3 pool teratas
 
 function fmtUsd(n) {
   if (n == null || !Number.isFinite(Number(n))) return '-';
