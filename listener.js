@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { Connection, PublicKey } from '@solana/web3.js';
+import { startApiServer } from './api-server.js';
 
 const DLMM_API      = 'https://dlmm.datapi.meteora.ag';
 const __dirname     = path.dirname(fileURLToPath(import.meta.url));
@@ -493,7 +494,10 @@ export default async function startListener(pools) {
   console.log('  Press Ctrl+C to stop\n');
 
   const poolList = pools.map(p => '<code>'+p.name+'</code>').join(', ');
-  await tgSend('🚀 <b>Meteora Wallet Collector</b> (LP only)\n🏊 Pools: '+poolList+'\n👛 Existing: '+lpWallets.size+'\n💬 /help for commands');
+  await tgSend('🚀 <b>Meteora Wallet Collector</b> (LP only)\\n🏊 Pools: '+poolList+'\\n👛 Existing: '+lpWallets.size+'\\n💬 /help for commands');
+
+  // Start API server for Meridian integration
+  startApiServer();
 
   // Poll Telegram commands — recursive setTimeout to avoid 409 conflicts
   async function pollLoop() {
