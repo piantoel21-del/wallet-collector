@@ -131,6 +131,7 @@ function sendStartMenu(chat) {
     [
       [{text:'👛 Daftar Wallet', callback_data:'nav_wallets'}],
       [{text:'📊 Statistik', callback_data:'nav_stats'},{text:'🏆 Top 5 PnL', callback_data:'nav_top'}],
+      [{text:'📋 Klasifikasi Wallet', callback_data:'nav_classify'}],
     ]
   );
 }
@@ -223,6 +224,16 @@ async function pollTgCommands() {
           tgAnswerCb(cb.id, '🏆');
           sendTopWallets(chat);
         }
+        else if (data === 'nav_classify') {
+          tgAnswerCb(cb.id, '📋');
+          tgReply(chat, '⏳ Mengklasifikasikan wallet...');
+          import('child_process').then(cp => {
+            cp.exec('node ' + path.resolve(__dirname, 'classify.js'), { cwd: __dirname, timeout: 60000 }, (err, stdout, stderr) => {
+              const out = (stdout||'').slice(0, 2000).replace(/</g,'&lt;');
+              tgReply(chat, '✅ <b>Klasifikasi selesai!</b>\n<pre>' + out + '</pre>\n📁 Lihat detail: wallet-classification.json');
+            });
+          }).catch(() => tgReply(chat, '❌ Gagal.'));
+        }
         continue;
       }
       
@@ -243,6 +254,7 @@ async function pollTgCommands() {
           '  /wallet &lt;addr&gt; — Detail analisa wallet\n'+
           '  /stats      — Statistik koleksi\n'+
           '  /analyze    — Analisis batch ulang\n'+
+          '  /classify   — Klasifikasi smart/bad wallet\n'+
           '  /top        — Top 5 wallet by PnL\n'+
           '  /help       — Pesan ini\n\n'+
           '👛 Total LP: <b>'+lpWallets.size+'</b>',
@@ -278,6 +290,15 @@ async function pollTgCommands() {
       }
       else if (text === '/stats') {
         sendStats(chat);
+      }
+      else if (text === '/classify') {
+        tgReply(chat, '⏳ Mengklasifikasikan wallet...');
+        import('child_process').then(cp => {
+          cp.exec('node ' + path.resolve(__dirname, 'classify.js'), { cwd: __dirname, timeout: 60000 }, (err, stdout, stderr) => {
+            const out = (stdout||'').slice(0, 2000).replace(/</g,'&lt;');
+            tgReply(chat, '✅ <b>Klasifikasi selesai!</b>\n<pre>' + out + '</pre>');
+          });
+        }).catch(() => tgReply(chat, '❌ Gagal.'));
       }
       else if (text === '/analyze') {
         tgReply(chat, '⏳ Analisis batch dimulai... tunggu beberapa saat.');

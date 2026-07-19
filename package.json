@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "start": "node index.js",
-    "analyze": "node analyze.js"
+    "analyze": "node analyze.js",
+    "classify": "node classify.js"
   },
   "dependencies": {
     "@solana/web3.js": "^1.98.4",
