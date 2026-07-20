@@ -12,8 +12,8 @@ const API_PORT = 3456;
 function scoreWallet(data) {
   const s = data.summary || {};
   let skor = 0;
-  const pnl = parseFloat(s.pnlUsd) || 0;
-  const balance = parseFloat(s.balancesUsd) || 0;
+  const pnl = parseFloat(s.totalPnlUsd || s.pnlUsd || 0);
+  const balance = parseFloat(s.openBalancesUsd || s.balancesUsd || 0);
   const roi = parseFloat(s.roi) || 0;
   const positions = s.totalOpenPositions || 0;
   const closedPositions = s.totalClosedPositions || 0;
@@ -47,10 +47,11 @@ function scoreWallet(data) {
   else if (traderType === 'passive_lp') skor += 5;
   if (strats.length >= 2) skor += 10;
 
+  // ── Negative signals (reduced penalty) ──
   if (pnl < 0) {
-    skor -= 30;
-    if (pnl < -10000) skor -= 20;
-    else if (pnl < -1000) skor -= 10;
+    skor -= 15;
+    if (pnl < -10000) skor -= 10;
+    else if (pnl < -1000) skor -= 5;
   }
   if (balance < 100) skor -= 20;
   if (roi < -50) skor -= 20;
@@ -74,7 +75,7 @@ function classifyWallets() {
       const addr = data.address || file.replace('.json', '');
       const skor = scoreWallet(data);
 
-      if (skor >= 60) {
+      if (skor >= 70) {
         smartWallets.push({
           name: 'wc-' + addr.slice(0, 8),
           address: addr,
@@ -82,8 +83,8 @@ function classifyWallets() {
           type: 'lp',
           source: 'wallet-collector',
           skor,
-          pnlUsd: parseFloat(data.summary?.pnlUsd || 0),
-          balancesUsd: parseFloat(data.summary?.balancesUsd || 0),
+          pnlUsd: parseFloat(data.summary?.totalPnlUsd || data.summary?.pnlUsd || 0),
+          balancesUsd: parseFloat(data.summary?.openBalancesUsd || data.summary?.balancesUsd || 0),
           positions: data.summary?.totalOpenPositions || 0,
           addedAt: new Date().toISOString(),
         });
@@ -117,10 +118,31 @@ function handleRequest(req, res) {
 
   const url = new URL(req.url, `http://localhost:${API_PORT}`);
 
-  // GET /health
+  // GET /health — enhanced health check
   if (url.pathname === '/health') {
+    // Read last analysis timestamp
+    let lastAnalyzedAt = null;
+    try {
+      const analysisPath = path.resolve(__dirname, 'wallet-analysis.json');
+      if (fs.existsSync(analysisPath)) {
+        const analysis = JSON.parse(fs.readFileSync(analysisPath, 'utf8'));
+        lastAnalyzedAt = analysis.analyzedAt ? new Date(analysis.analyzedAt).toISOString() : null;
+      }
+    } catch {}
+
+    const data = classifyWallets();
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({ status: 'ok', uptime: process.uptime() }));
+    res.end(JSON.stringify({
+      status: 'ok',
+      uptime: process.uptime(),
+      uptimeHuman: Math.floor(process.uptime() / 3600) + 'h ' + Math.floor((process.uptime() % 3600) / 60) + 'm',
+      wallets: {
+        total: fs.existsSync(WALLET_DIR) ? fs.readdirSync(WALLET_DIR).filter(f => f.endsWith('.json')).length : 0,
+        smart: data.total,
+      },
+      lastAnalyzedAt,
+      cacheTTL: CACHE_TTL / 1000 + 's',
+    }));
     return;
   }
 

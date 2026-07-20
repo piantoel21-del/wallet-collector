@@ -8,6 +8,12 @@ const WALLETS_FILE = path.resolve(__dirname, 'collected-wallets.json');
 const WALLET_DIR   = path.resolve(__dirname, 'wallet');
 const SUMMARY_FILE = path.resolve(__dirname, 'wallet-analysis.json');
 
+// ─── Config ─────────────────────────────────────────────────────────────────
+
+const CONCURRENCY  = 5;          // parallel wallets per batch
+const STAGGER_MS   = 150;        // stagger antar wallet dalam 1 batch
+const REFRESH_TTL  = 30 * 60_000; // 30 menit — skip kalo masih fresh
+
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
 function loadWallets() {
@@ -39,14 +45,42 @@ function classifyStrategy(pool) {
   return list.join(', ') || 'concentrated';
 }
 
-function saveWalletFile(addr, data) {
-  if (!fs.existsSync(WALLET_DIR)) fs.mkdirSync(WALLET_DIR, { recursive: true });
-  fs.writeFileSync(path.join(WALLET_DIR, addr + '.json'), JSON.stringify(data, null, 2));
+function walletFilePath(addr) {
+  return path.join(WALLET_DIR, addr + '.json');
 }
 
-// ─── Analyze wallet ──────────────────────────────────────────────────────────
+function saveWalletFile(addr, data) {
+  if (!fs.existsSync(WALLET_DIR)) fs.mkdirSync(WALLET_DIR, { recursive: true });
+  fs.writeFileSync(walletFilePath(addr), JSON.stringify(data, null, 2));
+}
+
+/**
+ * Cek apakah wallet perlu di-refresh.
+ * Skip jika file sudah ada dan terakhir di-analyze < REFRESH_TTL (30 menit).
+ */
+function needsRefresh(addr) {
+  const fpath = walletFilePath(addr);
+  if (!fs.existsSync(fpath)) return true;
+  try {
+    const data = JSON.parse(fs.readFileSync(fpath, 'utf8'));
+    const analyzedAt = data.analyzedAt || 0;
+    return (Date.now() - analyzedAt) > REFRESH_TTL;
+  } catch {
+    return true; // corrupt file, re-analyze
+  }
+}
+
+// ─── Analyze single wallet ─────────────────────────────────────────────────
 
 async function analyzeWallet(addr, index, total) {
+  const fpath = walletFilePath(addr);
+
+  // Incremental check
+  if (!needsRefresh(addr)) {
+    console.log('  [' + (index + 1) + '/' + total + '] ' + addr.slice(0, 8) + '... ⏭️ skip (fresh <30m)');
+    return null;
+  }
+
   console.log('  [' + (index + 1) + '/' + total + '] ' + addr.slice(0, 8) + '...');
 
   const analysis = {
@@ -153,13 +187,27 @@ async function analyzeWallet(addr, index, total) {
   return analysis;
 }
 
-// ─── Main ────────────────────────────────────────────────────────────────────
+// ─── Batch processor (parallel dengan stagger) ─────────────────────────────
+
+async function processBatch(wallets, startIdx, batchSize, total) {
+  const batch = wallets.slice(startIdx, startIdx + batchSize);
+  const promises = batch.map((addr, i) =>
+    new Promise(resolve => setTimeout(resolve, i * STAGGER_MS))
+      .then(() => analyzeWallet(addr, startIdx + i, total))
+  );
+  return Promise.all(promises);
+}
+
+// ─── Main ───────────────────────────────────────────────────────────────────
 
 async function main() {
+  const tStart = Date.now();
+
   console.log('');
   console.log('  ╔════════════════════════════════════════════════════╗');
-  console.log('  ║    📊  WALLET ANALYSIS — Meteora DLMM             ║');
-  console.log('  ║    Setiap wallet → wallet/{address}.json          ║');
+  console.log('  ║    📊  WALLET ANALYSIS — Optimized v2             ║');
+  console.log('  ║    Parallel: ' + String(CONCURRENCY).padEnd(32) + '║');
+  console.log('  ║    Incremental skip: <30 menit                   ║');
   console.log('  ╚════════════════════════════════════════════════════╝');
   console.log('');
 
@@ -170,30 +218,46 @@ async function main() {
     process.exit(1);
   }
 
-  console.log('  👛  Wallets: ' + wallets.length);
+  console.log('  👛  Total wallets: ' + wallets.length);
+  console.log('  ⚡  Concurrency: ' + CONCURRENCY);
   console.log('  📁  Output: wallet/*.json\n');
 
   const results = [];
-  for (let i = 0; i < wallets.length; i++) {
-    const r = await analyzeWallet(wallets[i], i, wallets.length);
-    results.push(r.summary);
-    await new Promise(r => setTimeout(r, 500));
+  let refreshed = 0;
+  let skipped = 0;
+
+  for (let i = 0; i < wallets.length; i += CONCURRENCY) {
+    const batchResults = await processBatch(wallets, i, CONCURRENCY, wallets.length);
+    for (const r of batchResults) {
+      if (r === null) {
+        skipped++;
+      } else {
+        results.push(r.summary);
+        refreshed++;
+      }
+    }
   }
 
   // ── Summary index ──
   const summary = {
     analyzedAt: Date.now(),
     totalWallets: wallets.length,
+    refreshed,
+    skipped,
+    durationMs: Date.now() - tStart,
     walletsWithOpenPositions: results.filter(r => r.totalOpenPositions > 0).length,
     walletsWithClosedPositions: results.filter(r => r.totalClosedPositions > 0).length,
     totalValueLockedUsd: results.reduce((s, r) => s + r.openBalancesUsd, 0),
     totalPnlAllUsd: results.reduce((s, r) => s + r.totalPnlUsd, 0),
     traderTypes: {},
-    wallets: wallets.map((addr, i) => ({
-      address: addr,
-      ...results[i],
-      file: 'wallet/' + addr + '.json',
-    })),
+    wallets: wallets.map((addr, i) => {
+      const r = results[i] || {};
+      return {
+        address: addr,
+        ...r,
+        file: 'wallet/' + addr + '.json',
+      };
+    }),
   };
 
   for (const r of results) {
@@ -204,6 +268,7 @@ async function main() {
   fs.writeFileSync(SUMMARY_FILE, JSON.stringify(summary, null, 2));
 
   // ── Print ──
+  const durSec = ((Date.now() - tStart) / 1000).toFixed(1);
   console.log('  💾  Saved:');
   console.log('       • wallet-analysis.json (summary)');
   console.log('       • wallet/*.json (' + wallets.length + ' files)\n');
@@ -212,10 +277,13 @@ async function main() {
   console.log('  ║  📊  SUMMARY                               ║');
   console.log('  ╠════════════════════════════════════════════╣');
   console.log('  ║  Total wallets      : ' + String(wallets.length).padEnd(24) + '║');
-  console.log('  ║  With open positions : ' + String(summary.walletsWithOpenPositions).padEnd(24) + '║');
-  console.log('  ║  With closed pos     : ' + String(summary.walletsWithClosedPositions).padEnd(24) + '║');
-  console.log('  ║  Total value locked  : $' + String(Math.round(summary.totalValueLockedUsd)).padEnd(20) + '║');
-  console.log('  ║  Total PnL all       : $' + String(Math.round(summary.totalPnlAllUsd)).padEnd(20) + '║');
+  console.log('  ║  Refreshed          : ' + String(refreshed).padEnd(24) + '║');
+  console.log('  ║  Skipped (fresh)    : ' + String(skipped).padEnd(24) + '║');
+  console.log('  ║  With open pos      : ' + String(summary.walletsWithOpenPositions).padEnd(24) + '║');
+  console.log('  ║  With closed pos    : ' + String(summary.walletsWithClosedPositions).padEnd(24) + '║');
+  console.log('  ║  Total value locked : $' + String(Math.round(summary.totalValueLockedUsd)).padEnd(20) + '║');
+  console.log('  ║  Total PnL all      : $' + String(Math.round(summary.totalPnlAllUsd)).padEnd(20) + '║');
+  console.log('  ║  Duration           : ' + String(durSec + 's').padEnd(24) + '║');
   console.log('  ╠════════════════════════════════════════════╣');
   console.log('  ║  Trader Types:');
   for (const [type, count] of Object.entries(summary.traderTypes)) {
@@ -224,12 +292,13 @@ async function main() {
   console.log('  ╚════════════════════════════════════════════╝\n');
 
   // Top 5
-  const sorted = [...summary.wallets].sort((a, b) => Math.abs(b.totalPnlUsd) - Math.abs(a.totalPnlUsd));
+  const sorted = [...summary.wallets].sort((a, b) => Math.abs(b.totalPnlUsd || 0) - Math.abs(a.totalPnlUsd || 0));
   console.log('  ── Top 5 wallets by |PnL| ──\n');
   for (let i = 0; i < Math.min(5, sorted.length); i++) {
     const w = sorted[i];
+    if (w.totalPnlUsd == null) continue;
     console.log('  ' + (i+1) + '. ' + w.address.slice(0,8) + '...  PnL: $' + w.totalPnlUsd.toFixed(2) +
-      '  ROI: ' + w.roi.toFixed(1) + '%  Type: ' + w.traderType +
+      '  ROI: ' + (w.roi||0).toFixed(1) + '%  Type: ' + w.traderType +
       '  Open: ' + w.totalOpenPositions + '  Closed: ' + w.totalClosedPositions);
   }
   console.log('');

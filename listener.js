@@ -414,6 +414,15 @@ async function processBatch(conn, pools) {
         const portfolio = await checkOpenPositions(addr);
         const hasLP = portfolio&&portfolio.totalPositions>0;
         if (hasLP) {
+          // Quick score filter: skip wallet with very low potential
+          const quickPnl = parseFloat(portfolio.total?.pnl||0);
+          const quickBal = parseFloat(portfolio.total?.balances||0);
+          const quickPos = portfolio.totalPositions||0;
+          const quickScore = quickPnl + (quickBal > 100 ? 10 : 0) + (quickPos >= 3 ? 15 : 0);
+          if (quickScore < 15) {
+            console.log('  ⏭️  Skip low-score wallet: '+addr.slice(0,8)+'... (score='+quickScore+')');
+            continue;
+          }
           // Cari pool mana yang memicu wallet ini
           const accountKeys = new Set();
           const msg = txResp.transaction.message;
@@ -499,10 +508,26 @@ export default async function startListener(pools) {
   // Start API server for Meridian integration
   startApiServer();
 
-  // Poll Telegram commands — recursive setTimeout to avoid 409 conflicts
+  // ─── Adaptive Telegram polling ─────────────────────────────────────────
+  let tgPollInterval = 5000;       // 5 detik default
+  let tgLastActivity = Date.now();
+  const TG_IDLE_TIMEOUT = 300_000; // 5 menit idle → slow poll
+  const TG_FAST_INTERVAL = 5000;   // 5 detik
+  const TG_SLOW_INTERVAL = 30000;  // 30 detik saat idle
+
+  // Track wallet discovery as activity
+  const origLog = console.log;
+  console.log = (...args) => {
+    tgLastActivity = Date.now();
+    origLog.apply(console, args);
+  };
+
   async function pollLoop() {
     await pollTgCommands();
-    setTimeout(pollLoop, 5000);
+    // Adaptive: slow poll if no activity for 5 minutes
+    const idle = Date.now() - tgLastActivity;
+    tgPollInterval = idle > TG_IDLE_TIMEOUT ? TG_SLOW_INTERVAL : TG_FAST_INTERVAL;
+    setTimeout(pollLoop, tgPollInterval);
   }
   pollLoop();
 

@@ -14,8 +14,8 @@ function scoreWallet(data) {
   const reasons = [];
 
   // ── Positive signals ──
-  const pnl = parseFloat(s.pnlUsd) || 0;
-  const balance = parseFloat(s.balancesUsd) || 0;
+  const pnl = parseFloat(s.totalPnlUsd || s.pnlUsd || 0);
+  const balance = parseFloat(s.openBalancesUsd || s.balancesUsd || 0);
   const roi = parseFloat(s.roi) || 0;
   const positions = s.totalOpenPositions || 0;
   const closedPositions = s.totalClosedPositions || 0;
@@ -63,10 +63,10 @@ function scoreWallet(data) {
 
   // ── Negative signals ──
   if (pnl < 0) {
-    skor -= 30;
-    reasons.push('PnL negatif -30');
-    if (pnl < -10000) { skor -= 20; reasons.push('Rugi besar -20'); }
-    else if (pnl < -1000) { skor -= 10; reasons.push('Rugi lumayan -10'); }
+    skor -= 15;
+    reasons.push('PnL negatif -15');
+    if (pnl < -10000) { skor -= 10; reasons.push('Rugi besar -10'); }
+    else if (pnl < -1000) { skor -= 5; reasons.push('Rugi lumayan -5'); }
   }
 
   if (balance < 100) {
@@ -92,9 +92,9 @@ function scoreWallet(data) {
 }
 
 function getLabel(skor) {
-  if (skor >= 60) return { label: '✅ SMART', emoji: '🟢' };
-  if (skor >= 30) return { label: '⚠️ NEUTRAL', emoji: '🟡' };
-  return { label: '❌ BAD', emoji: '🔴' };
+  if (skor >= 70) return { label: 'SMART', emoji: 'GREEN' };
+  if (skor >= 30) return { label: 'NEUTRAL', emoji: 'YELLOW' };
+  return { label: 'BAD', emoji: 'RED' };
 }
 
 // ─── Main ───────────────────────────────────────────────────────────────────
@@ -130,8 +130,8 @@ function main() {
         skor,
         label,
         emoji,
-        pnl: parseFloat(data.summary?.pnlUsd || 0),
-        balance: parseFloat(data.summary?.balancesUsd || 0),
+        pnl: parseFloat(data.summary?.totalPnlUsd || data.summary?.pnlUsd || 0),
+        balance: parseFloat(data.summary?.openBalancesUsd || data.summary?.balancesUsd || 0),
         positions: data.summary?.totalOpenPositions || 0,
         roi: parseFloat(data.summary?.roi || 0),
         traderType: data.summary?.traderType || '?',
@@ -146,13 +146,20 @@ function main() {
   results.sort((a, b) => b.skor - a.skor);
 
   // ── Summary ──
-  const smart = results.filter(r => r.skor >= 60);
-  const neutral = results.filter(r => r.skor >= 30 && r.skor < 60);
+  const SMART_THRESHOLD = 70;
+  const smart = results.filter(r => r.skor >= SMART_THRESHOLD);
+  const neutral = results.filter(r => r.skor >= 30 && r.skor < SMART_THRESHOLD);
   const bad = results.filter(r => r.skor < 30);
+
+  // Dynamic: top 20% percentile
+  const top20Idx = Math.ceil(results.length * 0.2);
+  const top20Threshold = results[Math.min(top20Idx, results.length - 1)]?.skor || 0;
 
   const summary = {
     classifiedAt: new Date().toISOString(),
     totalWallets: results.length,
+    smartThreshold: SMART_THRESHOLD,
+    top20Threshold,
     smart: smart.length,
     neutral: neutral.length,
     bad: bad.length,
@@ -187,16 +194,17 @@ function main() {
   console.log(`  💾  Hasil: ${OUTPUT_FILE}`);
   console.log('');
   console.log('  ╔══════════════════════════════════════════════════════╗');
-  console.log('  ║  📊  RINGKASAN KLASIFIKASI                         ║');
+  console.log('  ║  RINGKASAN KLASIFIKASI                             ║');
   console.log('  ╠══════════════════════════════════════════════════════╣');
-  console.log(`  ║  🟢 SMART   : ${String(smart.length).padEnd(10)} (skor ≥ 60)              ║`);
-  console.log(`  ║  🟡 NEUTRAL : ${String(neutral.length).padEnd(10)} (skor 30-59)             ║`);
-  console.log(`  ║  🔴 BAD     : ${String(bad.length).padEnd(10)} (skor < 30)               ║`);
+  console.log(`  ║  GREEN SMART   : ${String(smart.length).padEnd(10)} (skor >= ${SMART_THRESHOLD})          ║`);
+  console.log(`  ║  YELLOW NEUTRAL : ${String(neutral.length).padEnd(10)} (skor 30-${SMART_THRESHOLD-1})           ║`);
+  console.log(`  ║  RED BAD     : ${String(bad.length).padEnd(10)} (skor < 30)               ║`);
   console.log(`  ║  TOTAL      : ${String(results.length).padEnd(10)}                           ║`);
+  console.log(`  ║  Top 20%    : skor >= ${String(top20Threshold).padEnd(10)}                        ║`);
   console.log('  ╚══════════════════════════════════════════════════════╝');
   console.log('');
 
-  // ── Top 5 Smart ──
+  // -- Top 5 Smart --
   if (smart.length > 0) {
     console.log('  ── 🏆 TOP 5 SMART WALLETS ──\n');
     smart.slice(0, 5).forEach((w, i) => {
