@@ -494,7 +494,7 @@ export default async function startListener(pools) {
   console.log('  Press Ctrl+C to stop\n');
 
   const poolList = pools.map(p => '<code>'+p.name+'</code>').join(', ');
-  await tgSend('🚀 <b>Meteora Wallet Collector</b> (LP only)\\n🏊 Pools: '+poolList+'\\n👛 Existing: '+lpWallets.size+'\\n💬 /help for commands');
+  // Startup notification di-disable — tidak kirim ke Telegram
 
   // Start API server for Meridian integration
   startApiServer();
@@ -506,9 +506,8 @@ export default async function startListener(pools) {
   }
   pollLoop();
 
-  const summaryInt = setInterval(async () => {
-    await tgSend('📊 <b>LP Wallet Summary</b>\n👛 Total: <b>'+lpWallets.size+'</b>\n🏊 Pools: '+poolList);
-  }, 3_600_000);
+  // Summary notification di-disable — tidak kirim ke Telegram
+  const summaryInt = setInterval(() => {}, 3_600_000);
 
   process.on('SIGINT', async () => {
     clearInterval(summaryInt); saveIndex();

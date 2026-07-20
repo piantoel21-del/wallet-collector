@@ -1,0 +1,2247 @@
+{
+  "classifiedAt": "2026-07-20T03:10:03.916Z",
+  "totalWallets": 343,
+  "smart": 44,
+  "neutral": 85,
+  "bad": 214,
+  "smartWallets": [
+    {
+      "address": "FtJH2tKZEj13CPogi7uNU2BPSkgAPMabBmb8CTr6c4X1",
+      "skor": 115,
+      "pnl": 17511.155626055857,
+      "balance": 68338.87942304292,
+      "positions": 394,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "Bdrs3hKcEe4PpM91risoYm5YKceQ7tsaovs4otog6HBz",
+      "skor": 110,
+      "pnl": 1363.3049529024668,
+      "balance": 243812.21009390772,
+      "positions": 65,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "4QQdiTw5o2BZtKr1uXc74mHG6bBNmVwNK7zkyLDMwwj9",
+      "skor": 100,
+      "pnl": 130.40891875899933,
+      "balance": 94840.25758133919,
+      "positions": 41,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "7N9dP7jmRbH2GTbebH1psCBrch2D3Hh3dHW9vpg6aXrM",
+      "skor": 100,
+      "pnl": 170.65322422190297,
+      "balance": 135678.5524917357,
+      "positions": 52,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "39ghSrsk9mtSuyFUrmLJsFXqz9tSbQrBqzgCZ4knGeN8",
+      "skor": 95,
+      "pnl": 83.55023390870565,
+      "balance": 48955.35814900523,
+      "positions": 23,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "5iB13i7iUEANoCmzfnRHfnLR9LF8pdsDbXiTPxT6Ai9t",
+      "skor": 95,
+      "pnl": 153.74217275861957,
+      "balance": 34519.40684333523,
+      "positions": 33,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "2C85Bu885yL69frXS87wqJNcsiwpfToTWjA21w1jNwno",
+      "skor": 90,
+      "pnl": 201.20778441246796,
+      "balance": 10195.45237850204,
+      "positions": 13,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "2hev2t5XM5J3xvdLgdAkNUpr6ZRkG7aLwVK9UcVmuKJu",
+      "skor": 90,
+      "pnl": 38.35365389816192,
+      "balance": 6266.192899914775,
+      "positions": 43,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "38VmzP44XEj3ZoSz4L1wJrx4frehPv4TnTpcpGSwuPx1",
+      "skor": 90,
+      "pnl": 370.4558164454502,
+      "balance": 40384.84975992114,
+      "positions": 14,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "3iGG9iekXGjDn5GwfHSh7LJVGX52R6vchAUdeY9Kwmui",
+      "skor": 90,
+      "pnl": 97.45218492367837,
+      "balance": 10088.091750865746,
+      "positions": 18,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "7D8TmUFopnpUkWQaGfFL265BogV6hA7t7ExaM7ZmyT4i",
+      "skor": 90,
+      "pnl": 107.17454157784005,
+      "balance": 15073.016461670713,
+      "positions": 11,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "7XV2nCRquHkiu6kWsFm3BeREmFQevfcyzGyKfVXQ9tkq",
+      "skor": 90,
+      "pnl": 322.6955190407191,
+      "balance": 26795.092057869864,
+      "positions": 11,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "9wvXHZCKWJBXrTrPH5DL7RVWFyLgoE1i9ipYbBT2Rv5X",
+      "skor": 90,
+      "pnl": 555.35839982457,
+      "balance": 30802.88424306049,
+      "positions": 14,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "HgYjnG7Z25eFGafuV26M49borBjzkYBMS8aymt8pG8Xh",
+      "skor": 90,
+      "pnl": 236.28935854023314,
+      "balance": 16990.41689497872,
+      "positions": 16,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "J4tkGDbTUVtAkcziKruadhRkP3A9HquvmBXK6bsSVArF",
+      "skor": 90,
+      "pnl": 11.327946486070292,
+      "balance": 4134.508003850278,
+      "positions": 72,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "5TvARq2eDkbspJRasST57EC3QyyUTA3tU8bPBTCx2DyP",
+      "skor": 85,
+      "pnl": 71.94240413843802,
+      "balance": 9831.292412968382,
+      "positions": 18,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "AhFQUmnchHSq5KhqfLGJi7gKVu7Gj45GpvxdSUvxKEvS",
+      "skor": 85,
+      "pnl": 46.18289101371221,
+      "balance": 6237.463326724761,
+      "positions": 11,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "BzNC9FVuQtsguq1w7kHPdEbuiSKoTU5E1KQjUE6KhQhA",
+      "skor": 85,
+      "pnl": 26.249843527990606,
+      "balance": 5909.732199421063,
+      "positions": 15,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "Cactus2rZfwmprgTuDHEbWVyaJBSELkrUgrbTkhMMiWq",
+      "skor": 85,
+      "pnl": 6.542394482930035,
+      "balance": 2439.1034797565753,
+      "positions": 11,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "Eqoc4DrRBnhx3oC2yq4X9vrSCj939B6Sw8Jp25iJkZ2W",
+      "skor": 85,
+      "pnl": 54.215211064599885,
+      "balance": 7766.488217344431,
+      "positions": 13,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "BA36AnwpTfKeqNhExVUFFbzUAQTyKYvJrEokKJqVCTPi",
+      "skor": 80,
+      "pnl": 1716.4835516825601,
+      "balance": 51940.77271705091,
+      "positions": 4,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "FdW421oxM9cUt5mQZvcpEqHGZkgBHSEGFBnmcXBezBQN",
+      "skor": 80,
+      "pnl": 14.169958863263265,
+      "balance": 906.8560477433427,
+      "positions": 21,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "D8EFmW7TbER1E3f9Yd7jYdLjKQg3P8A9vpjXxjH5XmXL",
+      "skor": 75,
+      "pnl": 3.2358063347985606,
+      "balance": 285.4737149325367,
+      "positions": 15,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "DHFtJe1V8u7ESdgPF457FuRJRtQMTdb15JHrHS95zHnG",
+      "skor": 75,
+      "pnl": 1.6392873688327398,
+      "balance": 156.11253619065823,
+      "positions": 10,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "2xtd7MUkfBxnMjUSqKBZNMzZyoZam52K7jYKEhm9f56h",
+      "skor": 70,
+      "pnl": 389.557782056295,
+      "balance": 4269.271365822034,
+      "positions": 7,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "5Emv7U4MJy1t4YmBffmK8XWBXnqGU2vzRio1fy91L9C9",
+      "skor": 70,
+      "pnl": 52.736687740729224,
+      "balance": 5110.812779008616,
+      "positions": 5,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "5SNQJZ9kRrpDWUEksmqYg3hDs5psJPfDSvBrbaCtRMKy",
+      "skor": 70,
+      "pnl": 1256.5477379321533,
+      "balance": 51374.025447293476,
+      "positions": 2,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "8d8qgu7X8UqMfUfb3wH7H7iUePL4D51btmXtcLB5mMWB",
+      "skor": 70,
+      "pnl": 4.767185050198918,
+      "balance": 1708.0496510894432,
+      "positions": 7,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "9JHGdZj4vyKhDbHUPvEezEo6Rc4GPsvEvjrh4Jh6KuXD",
+      "skor": 70,
+      "pnl": 26.807230765477243,
+      "balance": 6144.651418079951,
+      "positions": 8,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "DKzz7r8n2K2Q5CvStga1Smp7PhmTSE9VEa3aYcRrMaAS",
+      "skor": 70,
+      "pnl": 2.4218231890019126,
+      "balance": 1280.6031584838659,
+      "positions": 7,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "EDRnt8mMENo14iBmkSMahVz1CEhyncqayT1qcPwwJhha",
+      "skor": 70,
+      "pnl": 7.4105997522332245,
+      "balance": 1436.4270652165692,
+      "positions": 6,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "FeRRJQsTSNCxuJQowGHwdN9fXPgapXMijzzycRwxFKvX",
+      "skor": 70,
+      "pnl": 767.0941687073425,
+      "balance": 3236.0564558178608,
+      "positions": 6,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "FsvLjzUGYwrB2Pc8AVESS7ywriTehWhfXWuftDCPYD6r",
+      "skor": 70,
+      "pnl": 30.25556005133717,
+      "balance": 1043.0912575166735,
+      "positions": 7,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "EhmcEroadv8gcvPgJrmG6aYoFoWWedMSPfhmjYAYKQFu",
+      "skor": 65,
+      "pnl": 614.1660651452582,
+      "balance": 12151.376174972085,
+      "positions": 3,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "6YdUdnvyVaCFxV2gJVG2RquLgQH8zSfBK5TM6HaCq29p",
+      "skor": 60,
+      "pnl": 0.8338172152980361,
+      "balance": 108.38489973475315,
+      "positions": 5,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "7NaKdUno1djjhtxhM5pS5fQQfMm7emPpZSCqQQ6ijTZS",
+      "skor": 60,
+      "pnl": 1.0123966603859245,
+      "balance": 225.96588959705144,
+      "positions": 6,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "7PBxKU5DEuuqSCrYz689D98WZKoJ3AHt6NnTv4xQMnxe",
+      "skor": 60,
+      "pnl": 15.066287560714215,
+      "balance": 1471.7533193119662,
+      "positions": 4,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "9jxtAFMThFQczAPnqVzDGo2oEhujrp3o57seA28bLPRU",
+      "skor": 60,
+      "pnl": 20.579334759405267,
+      "balance": 122.54606870980207,
+      "positions": 5,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "AECJWQnPcf8JWbojkmp5BNfX5M9DK6D15kES9d4EcrRj",
+      "skor": 60,
+      "pnl": 7.222707488138894,
+      "balance": 4940.364596722287,
+      "positions": 3,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "DDmkfefcWYiJXdBNFakn3H6jLchjmhVbJkoaVFAEZtwe",
+      "skor": 60,
+      "pnl": 1.6421116737807324,
+      "balance": 105.95820253210793,
+      "positions": 7,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "GMP5veEVzTQj4FqqoQ2dF8mgjxJ5tvbHdZEJEZJipvbB",
+      "skor": 60,
+      "pnl": 8.400339461254433,
+      "balance": 563.6231862688503,
+      "positions": 5,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "GNRoV2Joq2nZFEfJPNhtjVBcNxHSLpnFJm2Kuh3KBo3o",
+      "skor": 60,
+      "pnl": 4.114899768190327,
+      "balance": 1338.3307979881465,
+      "positions": 4,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "GWeHTANQJnfFYLR3jwaKvfWKbsTqRMbMBzYPDqg972Ge",
+      "skor": 60,
+      "pnl": 3.4064694264625075,
+      "balance": 924.7965369008903,
+      "positions": 6,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    },
+    {
+      "address": "H8rGnYyX5cNZTpX2hvnnuPArmjryc1TxmWD27zvxfQAW",
+      "skor": 60,
+      "pnl": 7.028820556507405,
+      "balance": 504.74039674281204,
+      "positions": 5,
+      "roi": 0,
+      "traderType": "active_lp",
+      "strategies": []
+    }
+  ],
+  "neutralWallets": [
+    {
+      "address": "8e4ry2zcJVjXv9P3Lk5fPEcwxPYwE1PoxaLVnoVfAZ2k",
+      "skor": 55,
+      "pnl": 11.554343677988072,
+      "balance": 10740.07274602123
+    },
+    {
+      "address": "9GDrHFCWG24sLGQTJpkAh7hHJ99Un9gDnYvcrn7PCu7u",
+      "skor": 55,
+      "pnl": 140.28308714576997,
+      "balance": 18906.049890812148
+    },
+    {
+      "address": "2RofzTbhiooFdacJjhVacN6bzdBArgRCUCDqsWYtMCyP",
+      "skor": 50,
+      "pnl": 72.23144171155991,
+      "balance": 9145.947008581823
+    },
+    {
+      "address": "2hHLk2uV1KVU6GDR7TRKAs66JwT9ZZa9vAfAQUriaHvU",
+      "skor": 50,
+      "pnl": 0.302651677697483,
+      "balance": 264.97749225822633
+    },
+    {
+      "address": "3CPwnjLSKRJLD4o9g3VKMQQGcDRhNgWyBt5VREfjwXbH",
+      "skor": 50,
+      "pnl": 17.64829617770738,
+      "balance": 3598.7119780279018
+    },
+    {
+      "address": "3F7SrgsU7D3zWxXKTxyJjWn4FazSh9Z6K9J61eqPHriL",
+      "skor": 50,
+      "pnl": 0.3216465279996896,
+      "balance": 506.63302427302085
+    },
+    {
+      "address": "4RaoJ2ErcXM5DxDKXvooN3LDkrV6ebgV22wPavynaTXB",
+      "skor": 50,
+      "pnl": 0.2020660015350586,
+      "balance": 2460.864809627674
+    },
+    {
+      "address": "51nYkber7H1cb2KbZ6jPmqzaTeqmJszuDRBwsf1ShEWS",
+      "skor": 50,
+      "pnl": 1.1076578429604496,
+      "balance": 359.24622290028157
+    },
+    {
+      "address": "5SC6Ybu16aXCdaPxNgFgsw3NvLhJBXH5cMNnYgLBHm63",
+      "skor": 50,
+      "pnl": 3.3398553370803725,
+      "balance": 245.22201524515896
+    },
+    {
+      "address": "5jGEgM3SmWiJtqoSHUSwvs4PAp6e9bRF9Du7gb3k1VQJ",
+      "skor": 50,
+      "pnl": 7.098743771031636,
+      "balance": 746.0929148377902
+    },
+    {
+      "address": "6PBL78NrU6LaUevB3Zgys9ZXUVJdbiqt4znyhLMhngqF",
+      "skor": 50,
+      "pnl": 1.837002774498501,
+      "balance": 1059.8196861488593
+    },
+    {
+      "address": "6wMd56nB5ByFf81UM4n2euVFKPpWAkS5AJCh12yW2rYC",
+      "skor": 50,
+      "pnl": 10.71524342673851,
+      "balance": 520.638477700131
+    },
+    {
+      "address": "7LV5p2nHW4tW6FQN7cr7LGBgYiBmbGHqaCPpxL55RFzn",
+      "skor": 50,
+      "pnl": 3.2786189302155435,
+      "balance": 3722.7212581639774
+    },
+    {
+      "address": "7Rmr4nPQyfEqXfQA1RZUFbWya9cpWWfJwG4GXrSnugoT",
+      "skor": 50,
+      "pnl": 0.309507497712616,
+      "balance": 374.6232019056758
+    },
+    {
+      "address": "7aDHQU46WtuADqbRZZmeojXAmZfNit55Uj4TiQNpwrkc",
+      "skor": 50,
+      "pnl": 0.39880085172904955,
+      "balance": 212.7126281961618
+    },
+    {
+      "address": "9gUnKzezoDqooRAmouk2FLjwgm8qjGL7GUJuJZpvS8d8",
+      "skor": 50,
+      "pnl": 13.401930331102207,
+      "balance": 231.84375650579113
+    },
+    {
+      "address": "9kp6AqKN1BUjTGSRf4fd5AeqGP7VcUdnX9ZsUjam8MP7",
+      "skor": 50,
+      "pnl": 0.8771950337542052,
+      "balance": 229.51110009523325
+    },
+    {
+      "address": "9zLYYeKpQPSGZ8KiftQJR2xUafPF6x1UHCyef3i6ezPh",
+      "skor": 50,
+      "pnl": 4.363572960451847,
+      "balance": 348.72584128758746
+    },
+    {
+      "address": "AFpMtLzMGGG9q85W3kHEBW9aPcvzpa81n2VvHS1aXfwp",
+      "skor": 50,
+      "pnl": 179.74453578059786,
+      "balance": 6509.519851166365
+    },
+    {
+      "address": "AMgFYX1XXBDsd3VkkJqF8p9SBp4H2J5T8gQMj8hGNfMU",
+      "skor": 50,
+      "pnl": 0.4194839192244042,
+      "balance": 76.64559316269933
+    },
+    {
+      "address": "AR4u9dcbaFMZq9jRwwTk2DXJv1gn7xoJSCS7pyDH31MQ",
+      "skor": 50,
+      "pnl": 8.911346386940068,
+      "balance": 288.6113897919854
+    },
+    {
+      "address": "AcqHi1HWmhjpW8WX9acrJkot34hgYnEPtFVn33XcX9Gp",
+      "skor": 50,
+      "pnl": 37.71076156952745,
+      "balance": 5750.207721622316
+    },
+    {
+      "address": "AwJU7DSPTREnhU4sY4piw11JYCDkaa1LNsKo3EXFqmvB",
+      "skor": 50,
+      "pnl": 2.287814393478584,
+      "balance": 3721.675647099395
+    },
+    {
+      "address": "BEZAQx9fh7XTxtCQ2rsbonwjCcFzGcu4WjZDWJSWumJQ",
+      "skor": 50,
+      "pnl": 2.0435262137912105,
+      "balance": 3001.0007733814145
+    },
+    {
+      "address": "BwQ98Ys2TDermau4wmTbxfCUFXzS6rrioD2Lux2XBRvc",
+      "skor": 50,
+      "pnl": 18.484630642796674,
+      "balance": 3298.4404090231947
+    },
+    {
+      "address": "D4VQTvxaAXUw6dCXs6wc95yk2gdif2QzcXVfdX6quq34",
+      "skor": 50,
+      "pnl": 3.9959822145719954,
+      "balance": 1520.3771108050746
+    },
+    {
+      "address": "D8Zpg5V11JF2u9A2zMUqmGwJVKvKS9mkjUqzmMDiioS7",
+      "skor": 50,
+      "pnl": 3.7723235209371566,
+      "balance": 114.50031815990843
+    },
+    {
+      "address": "DbWdsneSLibhidrYzyEDWhsq8gjPthrfNc67GuNn6UEi",
+      "skor": 50,
+      "pnl": 1.4236698736860376,
+      "balance": 151.59402660673663
+    },
+    {
+      "address": "FUMjVwcz6SN522THcEdRWpS6eAdm5RFyrVDHqevBfekR",
+      "skor": 50,
+      "pnl": 3.658413972921153,
+      "balance": 2281.5529769946565
+    },
+    {
+      "address": "FzGY7nzAyuXkpLvTdEaS4TjK5TftY4t5bnLBFCNZb1pJ",
+      "skor": 50,
+      "pnl": 0.20372057274849453,
+      "balance": 829.1520711901292
+    },
+    {
+      "address": "GCvrzVpRswQEsbrooAkXM7p73i2vGVrGtjT9HCSaUnnR",
+      "skor": 50,
+      "pnl": 4.693166592528286,
+      "balance": 340.6281411262959
+    },
+    {
+      "address": "GZS4yuUvcX2rPP2VC86dPjVdgWLzM4BTdK9Cm7MBFtgU",
+      "skor": 50,
+      "pnl": 0.34925458401335163,
+      "balance": 604.0440297644122
+    },
+    {
+      "address": "GdDgtxQb54b8WbaydTJcQ1MTg3NyuvrAxi5mDoxkmguF",
+      "skor": 50,
+      "pnl": 86.09314713616186,
+      "balance": 3481.7165814236614
+    },
+    {
+      "address": "HqdBVz3SNpjcb1NYwXerr837BvQXsffBvX2Yz8Bj9pb2",
+      "skor": 50,
+      "pnl": 16.977183895662904,
+      "balance": 492.36971892706
+    },
+    {
+      "address": "2QiQWzz8eKUWLgMZXE57576Qcu7nPVsP29SxEe6Pupea",
+      "skor": 40,
+      "pnl": 0.3428541647433292,
+      "balance": 240.4409065186894
+    },
+    {
+      "address": "2baaSErghR1y7NvqaCy1XjA4X7XptPMw3PyTA8X1TSYY",
+      "skor": 40,
+      "pnl": 31.610736570183974,
+      "balance": 374.6412507142226
+    },
+    {
+      "address": "2fqhtyxBP1oCSLhRxMWL6GrXnTY789wsTfJL6jEzg38R",
+      "skor": 40,
+      "pnl": 0.7544827741352265,
+      "balance": 224.9979393358128
+    },
+    {
+      "address": "2tryoNoiLqggeUtrBP2crmAacshz5Yh4kpc21PNkDiJq",
+      "skor": 40,
+      "pnl": 0.25363321746800693,
+      "balance": 254.90883935564
+    },
+    {
+      "address": "2vj5zEbuXGtcZ57mgS8wLKbfedpJVcbYgCziY8EY28Gv",
+      "skor": 40,
+      "pnl": 0.24174127857514804,
+      "balance": 176.23064621950806
+    },
+    {
+      "address": "4TozAxFNokz2E8UWqRQCrDMDz86c1o3FpCCB6F5LcJyv",
+      "skor": 40,
+      "pnl": 0.6913338787367422,
+      "balance": 377.71724913525657
+    },
+    {
+      "address": "4v95AxQoXHnkEGrU6vxC89DTivZdn3sKPcshxFnRaqsg",
+      "skor": 40,
+      "pnl": 3.3536947225941276,
+      "balance": 452.97748462938733
+    },
+    {
+      "address": "4yzZFCeYeJPWfZPCUNpLJnZWT4i1mf9BVQSP4VFs15bh",
+      "skor": 40,
+      "pnl": 0.3608111568627521,
+      "balance": 118.97274471607767
+    },
+    {
+      "address": "53GaFycuJZxxHCygBskMebFqqQ95EK7fMWa1YwhSV2YT",
+      "skor": 40,
+      "pnl": 3.056004108639229,
+      "balance": 431.56290109154935
+    },
+    {
+      "address": "5FeibYrgckxyRg5TVPtXh6A6z9ZMRNzfXYitBGYSH6we",
+      "skor": 40,
+      "pnl": 0.04525484415700021,
+      "balance": 167.08711072915705
+    },
+    {
+      "address": "5KboZbSSss7HBMgWuPXFM4hHbs6axjuuoHkSgEC8xJqC",
+      "skor": 40,
+      "pnl": 2.7271082825387793,
+      "balance": 300.38195326556917
+    },
+    {
+      "address": "5QefLZmohHYhc2CNyemyb8up6ftWvgUyGjms3iCkTfNx",
+      "skor": 40,
+      "pnl": 0.3760579380108311,
+      "balance": 114.88221560375447
+    },
+    {
+      "address": "5p2jXBpP5mFKi6c1t2uy8YDdaEvHfnjW7rWK1H5DnSfQ",
+      "skor": 40,
+      "pnl": 0.06739930343218248,
+      "balance": 266.60017552090767
+    },
+    {
+      "address": "5prEzF8hSNaL5tezQ1XAqfj8LgMaVpyd7qy7VhJaLfCW",
+      "skor": 40,
+      "pnl": 144.21347389859125,
+      "balance": 984.5531439271806
+    },
+    {
+      "address": "62hLSuRkHCcQMMnVroFTKZ7Zj6o4TZHhQMtFWgCmvwD2",
+      "skor": 40,
+      "pnl": 3.065451979663635,
+      "balance": 448.8281681151735
+    },
+    {
+      "address": "6MBMjfhFWSo2wNNej4d5dw8s4weRVGcqxtZPVwh7juGV",
+      "skor": 40,
+      "pnl": 6.262025609069553,
+      "balance": 350.13754362999634
+    },
+    {
+      "address": "6SLcqJjug39CAePTWDBSbrvPznK5TC9tZg6uWcULbqJT",
+      "skor": 40,
+      "pnl": 0.7779995525198302,
+      "balance": 103.77717789228943
+    },
+    {
+      "address": "73KDxV6uEcogbgENiJE4PK7MMucC8fcGudL8hgbnZcJk",
+      "skor": 40,
+      "pnl": 0.4753887782488988,
+      "balance": 150.16238935517853
+    },
+    {
+      "address": "7Fq7Z41EoXZNptkpKapHYdPMxR4cAgtyPdUQSgg4tT8A",
+      "skor": 40,
+      "pnl": 0.67544510394886,
+      "balance": 182.5791998596465
+    },
+    {
+      "address": "8T3wJxFzhh3xsNzgNWnAHj3e7wtPuXyWq9PNyYyiQMNk",
+      "skor": 40,
+      "pnl": 3.369980698402287,
+      "balance": 452.99359355335133
+    },
+    {
+      "address": "91VgHKccar8bvkB3kEuCgwqxNpv9YNT3WPbNgzY9T4eZ",
+      "skor": 40,
+      "pnl": 39.43576651019852,
+      "balance": 230.58033459648868
+    },
+    {
+      "address": "9HTUUHFTWYuvsEuYodvGuD2GijJoVE9qQnKK8mz4BAvr",
+      "skor": 40,
+      "pnl": 0.19285676666528673,
+      "balance": 123.03472084365362
+    },
+    {
+      "address": "9YWXhfpSxXWNhkL3VuMbdx6WZFi97YEo787fco2VjAFR",
+      "skor": 40,
+      "pnl": 9.493862241453712,
+      "balance": 515.6831161668078
+    },
+    {
+      "address": "ALWoCZLLgsgnnexGo7YKCnF4MuLHMe5vA9vNYS7YNnVw",
+      "skor": 40,
+      "pnl": 1.383265932683173,
+      "balance": 284.0276296766347
+    },
+    {
+      "address": "AVFGjPmXd27oyzwZXDSam4fAjt7YjSToYESPAujT7u7D",
+      "skor": 40,
+      "pnl": 2.127556993870286,
+      "balance": 133.48588035626994
+    },
+    {
+      "address": "B5LxSVja3zr12JzpYe9sfxQkHYvmgeQvsfdYSJHn1rmn",
+      "skor": 40,
+      "pnl": 4.026677732309736,
+      "balance": 417.24346797160104
+    },
+    {
+      "address": "B68UrKNMXjNPKU2XMHWpJresMcHhikvWdnjDyZ3SpM5i",
+      "skor": 40,
+      "pnl": 0.6112615960479388,
+      "balance": 168.10710887891537
+    },
+    {
+      "address": "BRBS8a8ymd53ZxDzu92mSq294my3Mqv1gPtNovGW2sjF",
+      "skor": 40,
+      "pnl": 1.1134672084384363,
+      "balance": 146.48089507226703
+    },
+    {
+      "address": "BTcW3N1Nz2o6YuEgsMLPD7UryFmSbgnS8qb5CsRWgiLA",
+      "skor": 40,
+      "pnl": 1.2238294027487058,
+      "balance": 167.27324035412627
+    },
+    {
+      "address": "BnaxSQRQjGQdNW3P34LeDVSroizamhfkwzDTyDNimsDZ",
+      "skor": 40,
+      "pnl": 2.317049421008619,
+      "balance": 527.187777690291
+    },
+    {
+      "address": "BrjP7pJua5eFyweZvcCLmQgKkCkvrTidU9BQbTzoW3rv",
+      "skor": 40,
+      "pnl": 0.6705133844767488,
+      "balance": 205.99674859576413
+    },
+    {
+      "address": "CK4w4tA7LuQSXBbS2xLgaKjAxdzZqR7GnnnsvqPo1QMB",
+      "skor": 40,
+      "pnl": 28.658965561576736,
+      "balance": 448.2275261657222
+    },
+    {
+      "address": "CUae7rsLQcEk79XSUqqkzkwZGSbcJnLDQWjyUrsPvzA9",
+      "skor": 40,
+      "pnl": 0.24788280458483314,
+      "balance": 908.2869873419579
+    },
+    {
+      "address": "D4ikG4XUigfsZG2Y49yncVnoMATFS39vcbcWywvzWn2t",
+      "skor": 40,
+      "pnl": 0.9651702616710054,
+      "balance": 672.3301117236817
+    },
+    {
+      "address": "DJMdxcP4SFq6mT6pFQ4u68apCkWq62qFFTp7w44VDew5",
+      "skor": 40,
+      "pnl": 17.67658961179029,
+      "balance": 126.55453486057682
+    },
+    {
+      "address": "DZi8UM2j39vT6jXCDhdHEVK3inBuEBrg3xGmcddkYn3a",
+      "skor": 40,
+      "pnl": 3.3337543861107974,
+      "balance": 435.26890438904445
+    },
+    {
+      "address": "DrrNcz4H9PbpzvpQofh3CT8ctcra3jiKZSzx47KDs6dg",
+      "skor": 40,
+      "pnl": 0.2474955635439926,
+      "balance": 281.0887680640004
+    },
+    {
+      "address": "ECL3K4DWEnejeobhcTG82fdutKrxXC6vBwvLmcKeMvL3",
+      "skor": 40,
+      "pnl": 4.755028883365391,
+      "balance": 791.3739416857503
+    },
+    {
+      "address": "EgT5Vdecp8mU2F7ctomDBvVZQWRiD8StWWmhikV43mUf",
+      "skor": 40,
+      "pnl": 1.5358807110972066,
+      "balance": 239.69864135069875
+    },
+    {
+      "address": "Ej4udyUaY4o6gDSYGJDtJAnwfsrqrZ4FVsc76xVs9dPq",
+      "skor": 40,
+      "pnl": 12.402901917439436,
+      "balance": 241.0445828796974
+    },
+    {
+      "address": "FehDPJwU9mAVmv2epKLWNwHBV7bCSBSNCzMmWhmjv6Ce",
+      "skor": 40,
+      "pnl": 3.6265385957322565,
+      "balance": 689.6553693451999
+    },
+    {
+      "address": "Gb5mKL2qgkZC8NqDappXkXrBmSNpB5ub4sNLN4WsttZn",
+      "skor": 40,
+      "pnl": 2.9226450898451617,
+      "balance": 271.06758427292857
+    },
+    {
+      "address": "HqxWXj8VJsGAwJuesYSxfsehfgjeZhu5LKYgvvE4gm9Y",
+      "skor": 40,
+      "pnl": 5.595938361594278,
+      "balance": 194.3129222300466
+    },
+    {
+      "address": "7A9ds4xSHgSs4Twkm4r6usaQtyhHoqmA2mF3XCZoBedu",
+      "skor": 35,
+      "pnl": -43.38434900416928,
+      "balance": 8427.165928038647
+    },
+    {
+      "address": "8ryctvNwpJTuuap3wuNTfcyEx4DjSuXvhGXSDHNaU8sQ",
+      "skor": 35,
+      "pnl": -3962.6965039405077,
+      "balance": 50500.39555228486
+    },
+    {
+      "address": "ByqbRLMcszhmxJhwcGcspLrQYKhCJqzr7DLBovrcoQSS",
+      "skor": 35,
+      "pnl": -272.308892184363,
+      "balance": 46466.31019079036
+    },
+    {
+      "address": "GzdPey5YcQCt2kp3KNGgub778vDFeQB5yRAbn3f3hGUY",
+      "skor": 35,
+      "pnl": -6.0084299935283845,
+      "balance": 1080.8497270846806
+    },
+    {
+      "address": "BBiVzFGfpZteVQWq96SVfsTBepnTfCnJuJzs3mirUucx",
+      "skor": 30,
+      "pnl": -16.9260954962175,
+      "balance": 3416.3173702126996
+    },
+    {
+      "address": "CE259RoStNqrmtTJE4eGxBq4C7mMJ7AGvTTFxhTNsLVu",
+      "skor": 30,
+      "pnl": -7.715992689255472,
+      "balance": 9340.303594448547
+    },
+    {
+      "address": "CsUWCMNhVD7HCorgUHf5ybgM79XuFL5EJquyAUuAMV33",
+      "skor": 30,
+      "pnl": -1037.9497652405971,
+      "balance": 13354.063230351809
+    },
+    {
+      "address": "Ft9hzniovzAeo4RBjdD3dhbgfdbu4VUXztEBRtNpWCuB",
+      "skor": 30,
+      "pnl": -1888.4209758165339,
+      "balance": 32772.9213068805
+    }
+  ],
+  "badWallets": [
+    {
+      "address": "3reBwRgdx7ZLSB1j3mGctWrHCJqAaZMytQms77xnn4iX",
+      "skor": 25,
+      "pnl": -1571.8686444513878,
+      "balance": 3293.9837317560523
+    },
+    {
+      "address": "4KHhYgBffpJjRgfrL4oi8Qa9Xezs5VEgfnZa9XE9MH5F",
+      "skor": 25,
+      "pnl": -253.71453345746497,
+      "balance": 132.96533913556735
+    },
+    {
+      "address": "5t2VuCRKAuMUpgjwn7ktVbKU8D7D5xMH4mh8Wb8Cfo2H",
+      "skor": 25,
+      "pnl": 2.5188521034132787,
+      "balance": 46.13227683993574
+    },
+    {
+      "address": "9kfdB9UGFLoGWyFAZtqZjL2D5iYXtKqWqsLJUZEMvRgM",
+      "skor": 25,
+      "pnl": -3293.1854832940517,
+      "balance": 14961.077952589028
+    },
+    {
+      "address": "A8aZE1hcTp9xgDBHKtU1dzEktBpGx5ucqY3Fh7ZjNoFt",
+      "skor": 25,
+      "pnl": -5.705703774672131,
+      "balance": 780.8559327627518
+    },
+    {
+      "address": "DHK1noQV5z2VdBBfM93JVQZd5qU9epavbWYp6Z3m5BeL",
+      "skor": 25,
+      "pnl": -31.232737260644818,
+      "balance": 543.4875819456124
+    },
+    {
+      "address": "FJKvRDLdKJmWQUCjSfSuv69GcbpVSyYvETcqVQosih4a",
+      "skor": 25,
+      "pnl": 2.0938289284229477,
+      "balance": 42.73917241390485
+    },
+    {
+      "address": "GVez9QzZqziQNJQbrYNGTNs7ThFRjjmutpkxA69tWwsT",
+      "skor": 25,
+      "pnl": 0.9467714066335162,
+      "balance": 69.78854438088756
+    },
+    {
+      "address": "HRKZ6c6rBFrSjMjLEdj5dtfX5z7PHKvaqe8uu8H65yLe",
+      "skor": 25,
+      "pnl": 1.6152682053431722,
+      "balance": 34.516717524803994
+    },
+    {
+      "address": "DWabKCY6k2KP2eUCpKGfNrDWPnnJPzXA5LVT1A5zSVJX",
+      "skor": 20,
+      "pnl": -2376.3215383964007,
+      "balance": 3800.664953059768
+    },
+    {
+      "address": "Fmu4mT8u5qMKDmk7wmYywzRPu5AZsxozkp4CrUY64d7j",
+      "skor": 20,
+      "pnl": -0.6929621389936429,
+      "balance": 150.65453737947257
+    },
+    {
+      "address": "2cGuVJ1GvNW73cnbRxj6cCKbETYZFabCDLc2aPGB4iuG",
+      "skor": 15,
+      "pnl": 0.515367181679597,
+      "balance": 22.500424956398483
+    },
+    {
+      "address": "35mD3SvNZUDR1HipfrPTM5Bctk6bCygD3iCm65QbfzEK",
+      "skor": 15,
+      "pnl": -13.161319050518728,
+      "balance": 3299.8963551852517
+    },
+    {
+      "address": "3i9uEMukdJSRpSq27dPrghbbw2F6EjHtjMHv8WiAVKFA",
+      "skor": 15,
+      "pnl": 0.1915159159037927,
+      "balance": 43.47861303341474
+    },
+    {
+      "address": "3wud5f9GzcuLhaPND2JYmbaoYKCTYcGmfKNf87MWrFdb",
+      "skor": 15,
+      "pnl": 0.10248949381441008,
+      "balance": 36.7658182335837
+    },
+    {
+      "address": "4NkJqG147NAbqYNzPixvbwJaQX6bA25B1KAxDzXaKPY2",
+      "skor": 15,
+      "pnl": 0.6909287579544809,
+      "balance": 90.49264396024785
+    },
+    {
+      "address": "4QZZ7qSJR1LSSopmM23WLtrEGAYztpP5UfAKK3bvx1uG",
+      "skor": 15,
+      "pnl": 0.012849732071829933,
+      "balance": 7.56327523753422
+    },
+    {
+      "address": "4QrFDiHiKBVcLjU2oTGuuEQiGdTjgzfRRyhamE4mqojM",
+      "skor": 15,
+      "pnl": 0.4177796533783962,
+      "balance": 60.527133298683346
+    },
+    {
+      "address": "4SJQJj9JKopEaUU41QgKoBKTg4gUzWZzr6k8667T6r9c",
+      "skor": 15,
+      "pnl": 0.5567481024125938,
+      "balance": 5.933020182780252
+    },
+    {
+      "address": "4fXv7FUcKoJgoKtDqtuiQZArbXDggSKi4wMqGJTa2Ey5",
+      "skor": 15,
+      "pnl": 0.48289459607286744,
+      "balance": 37.61176647781386
+    },
+    {
+      "address": "4rqLCbbgTrFKoQjCyh4mRNyQzL9MmWLV2JaNvAp4EgLa",
+      "skor": 15,
+      "pnl": -11.050904881205497,
+      "balance": 79277.78874399277
+    },
+    {
+      "address": "4wPHYS8PyJLeRik61wxFnz6fMGEyXeLW5eeYw3BKERRp",
+      "skor": 15,
+      "pnl": 0.43714131808872025,
+      "balance": 54.89731377934835
+    },
+    {
+      "address": "5NK7stEqyBXDpU5VNFWYAbrHjzLChn6f2btBH7ZHhgKB",
+      "skor": 15,
+      "pnl": 0.07528833324679596,
+      "balance": 38.358390078571375
+    },
+    {
+      "address": "5Q1vsAu6L7BiA16KD23sYUz99ozXiUhAnAoA7qg67wBW",
+      "skor": 15,
+      "pnl": 0.007337782103185475,
+      "balance": 25.27437480038959
+    },
+    {
+      "address": "5V676H2Th83MycbJQ1JuL3f8GCCf6WDDVY2qY8Tj9zFb",
+      "skor": 15,
+      "pnl": 3.0543274850401416,
+      "balance": 0
+    },
+    {
+      "address": "5dyYe1LhHGDfyDJvTd1U1vEqCiLsL24GqBMWxeXw5X3p",
+      "skor": 15,
+      "pnl": -0.588323646884561,
+      "balance": 1182.774240137968
+    },
+    {
+      "address": "5r62TxWjYiYbZd1Gb5LnE7T1tyPR9w1VibkK8XvpX93r",
+      "skor": 15,
+      "pnl": 0.48585346520525263,
+      "balance": 76.89821569829033
+    },
+    {
+      "address": "6Bku2NeaocWEaPG5BajavnTYQ9BeHFggtimjGtWiS1YT",
+      "skor": 15,
+      "pnl": 0.023401547693475244,
+      "balance": 7.475478090302264
+    },
+    {
+      "address": "6HMdP6r8BazpYL38KzZkVSWByTCSP6z5VXTrd4pi6ZZ7",
+      "skor": 15,
+      "pnl": 0.016023282420221108,
+      "balance": 76.01479971397086
+    },
+    {
+      "address": "6WXSBfWmv7xq5ryzNEH97pSDqh1qDL2dnCCa3HuvqmHS",
+      "skor": 15,
+      "pnl": 0.12800850092972382,
+      "balance": 37.70236942225948
+    },
+    {
+      "address": "6qPaEfoAtjV2QuCNoU41tXHZhFP41QCNiPJuY4BwYmVx",
+      "skor": 15,
+      "pnl": 0.31431610690862044,
+      "balance": 69.13730612661513
+    },
+    {
+      "address": "6trw4vxKRkjSkrWSh2ttog5Wmbvk61UKAzmWH9LxWBEc",
+      "skor": 15,
+      "pnl": 0.00010850180648347418,
+      "balance": 20.230653518911133
+    },
+    {
+      "address": "74RpgRZBJJtSHAsuovWSic28Xj9CQjzDnj5cvghgvSVY",
+      "skor": 15,
+      "pnl": 0.08274839344032614,
+      "balance": 76.73932469532167
+    },
+    {
+      "address": "7W5LALmX9u3GE2KZP7C6u2x3kTtNSwxHp1BprzAAzgRT",
+      "skor": 15,
+      "pnl": 1.8389721556691612,
+      "balance": 37.41162961349701
+    },
+    {
+      "address": "7c46ucyUsSmjyjAoK4vjXhdkC8xkt7MK4Ed59mM4xdBj",
+      "skor": 15,
+      "pnl": 0.1276583199936141,
+      "balance": 43.35231129817803
+    },
+    {
+      "address": "8HciyPHKidTfmgNd7A4BPSeWCqfBf5mFj6S8w3qtFJgH",
+      "skor": 15,
+      "pnl": 0.08846985628917281,
+      "balance": 30.715702969482656
+    },
+    {
+      "address": "8QiUg1ybDnN8mJF1xr4U69xQsZKAtSdMJKVS23DBUjEh",
+      "skor": 15,
+      "pnl": 0.2919505382048051,
+      "balance": 43.176454585609676
+    },
+    {
+      "address": "8evjuBskkH5ZafjWS2iLrcYy88GJAuxnrptvM82NFtF3",
+      "skor": 15,
+      "pnl": 0.9452946927864083,
+      "balance": 23.1086415133611
+    },
+    {
+      "address": "8u7dJtkgWxB4M9pkqUGdch7mg3ZXC6qniJcWiNKTQXHG",
+      "skor": 15,
+      "pnl": 0.09051721088903975,
+      "balance": 27.26921346840053
+    },
+    {
+      "address": "959BWL1b5gkyx3DVuZTJdpBNoVD81XN5sLTCw4xSUPNr",
+      "skor": 15,
+      "pnl": 0.26439076724282984,
+      "balance": 98.32314989373936
+    },
+    {
+      "address": "98EvohkrpdECte9sCUKmBwPt84RmWHG7TsmMB3Bf9DTz",
+      "skor": 15,
+      "pnl": 0.19578215524933285,
+      "balance": 47.24108191355935
+    },
+    {
+      "address": "9BoXHiXezrPHV9be9rSgsSTiuVFuWTTnB7VH1ouxW31c",
+      "skor": 15,
+      "pnl": 0.0184340306987405,
+      "balance": 29.836423319469098
+    },
+    {
+      "address": "9Q1b74HFaRXnrjqrCcx8t8YsZFZmqSMzT1iN8gZWdtG3",
+      "skor": 15,
+      "pnl": 4.060909025969199,
+      "balance": 33.31985208598458
+    },
+    {
+      "address": "9QPQNgpGaiZf1aN3ryTbLofgxwq94uQa4C46pG6rphFS",
+      "skor": 15,
+      "pnl": 0.8660397038608991,
+      "balance": 56.536177619528516
+    },
+    {
+      "address": "9aDABK3ScqP1nJVu1XpK76EHkUJirDMKdmdKELjnQNA8",
+      "skor": 15,
+      "pnl": 0.30798502374993575,
+      "balance": 97.511336913449
+    },
+    {
+      "address": "9kVQgP4RQhJo7LAYyFndcYLc7L1sm97Duyiur1H3K7zS",
+      "skor": 15,
+      "pnl": 0.018606332079201593,
+      "balance": 59.55164264603096
+    },
+    {
+      "address": "A7nLYDyrSxbrWPCDkZB89cNgRoQD6CkZRJH6g86j5Hu8",
+      "skor": 15,
+      "pnl": 0.014471923767801265,
+      "balance": 7.567060647784488
+    },
+    {
+      "address": "AJtSQFs5FoDzos1AGqpQFSaD6sBBAnpYGkJuFQzXZQiU",
+      "skor": 15,
+      "pnl": 0.09027130285004148,
+      "balance": 75.04078344918109
+    },
+    {
+      "address": "Ak31huapuY5BkuEiAXXV48zmU9esjg4np4n29QgKudE1",
+      "skor": 15,
+      "pnl": 5.378928859115106,
+      "balance": 76.06588221912796
+    },
+    {
+      "address": "B2M94cA3LbJUQ3fEA2UmB8R5xd5TnrsmfbVyDNHUPiyc",
+      "skor": 15,
+      "pnl": 0.0037890215430138596,
+      "balance": 75.86325984424147
+    },
+    {
+      "address": "BX34Et6xcWcU1iHZNzUR2RBTCsfN6n4h5VYoenntX6Td",
+      "skor": 15,
+      "pnl": 3.403830965216688e-7,
+      "balance": 0.003029151787989493
+    },
+    {
+      "address": "CAakB5pFheHYPdaUMQGMFrPW88gkBgaYTd2m56ZVSW4f",
+      "skor": 15,
+      "pnl": 0.5725644869231274,
+      "balance": 75.95632804073868
+    },
+    {
+      "address": "CCsNuaisQYevVn2Td7pP79Yk7m6ASLW15zyQUxJ7Yap4",
+      "skor": 15,
+      "pnl": 1.6121281109268466,
+      "balance": 99.92696294718839
+    },
+    {
+      "address": "CF2nkDx9N171VQENKKzg2ww26xD63tqeQ2ZdGcMfaB3v",
+      "skor": 15,
+      "pnl": 1.6404075801953155,
+      "balance": 91.54583541029106
+    },
+    {
+      "address": "CQkKCSM4Ho4Td5j6g8Mzv9CP9HiiQEyhSsTtwnq7AoWS",
+      "skor": 15,
+      "pnl": 0.059040539904707146,
+      "balance": 37.28455498324116
+    },
+    {
+      "address": "CXpp7rxi4bVQsYEyAhWWhr8quZACAko4FeMLbWQfkovC",
+      "skor": 15,
+      "pnl": -2315.56626489287,
+      "balance": 56673.01245627742
+    },
+    {
+      "address": "Ckn5Q43mNiEmUvfxiszfLiJ67F4q6hkW4zLbVTXPVCru",
+      "skor": 15,
+      "pnl": 0.24601145838527572,
+      "balance": 49.47105790559421
+    },
+    {
+      "address": "Csx5D4qbet6ZPFbV8wCUgeFsbxo4AeMwkQHcVseHnmxV",
+      "skor": 15,
+      "pnl": -89.84950289763816,
+      "balance": 1530.232564608743
+    },
+    {
+      "address": "DQ9xASUuUM9mFLgozZDGoAGGnaB2zT6FzKWgqUvFDjyt",
+      "skor": 15,
+      "pnl": 0.06682270619199926,
+      "balance": 76.71106906815031
+    },
+    {
+      "address": "DpaecTeoK7GrNFWF4Bc4VWZ8QWQybc2tq8ftU3NKLgny",
+      "skor": 15,
+      "pnl": 1.5530247619639468,
+      "balance": 37.62589611444183
+    },
+    {
+      "address": "EA4DvMThvsyWq8mP2kdxmN4YMmoiijjBs7p5wDqKBNYB",
+      "skor": 15,
+      "pnl": -863.8275428111501,
+      "balance": 1158.3795150841436
+    },
+    {
+      "address": "EA76QgL1K8Ub2tRHscJdwvDTghg7cLe6xsY92zVh8Yje",
+      "skor": 15,
+      "pnl": 1.2693068616312448,
+      "balance": 13.29969614949359
+    },
+    {
+      "address": "ENVyBTnUWD2bg7yMH1WtJodJkZtSFmiW6ifBm4kLr1k7",
+      "skor": 15,
+      "pnl": -72.66692875962647,
+      "balance": 1275.298772114415
+    },
+    {
+      "address": "EeERSFvio7jxJ1XYaFwPyPYZcBztKmWmDjie1SwdH2Fh",
+      "skor": 15,
+      "pnl": 1.5086275357657541,
+      "balance": 98.05411938926053
+    },
+    {
+      "address": "FDtnBx5Pe2Sw2X2HBnJKuJZS8QoNSBXAQsrhByEpT8Bm",
+      "skor": 15,
+      "pnl": 0.15234184520129546,
+      "balance": 24.165851778480487
+    },
+    {
+      "address": "FHrcCRdcyooGghC7xBLixRGELKndut18RezHBPz8bChn",
+      "skor": 15,
+      "pnl": 0.007740108394571621,
+      "balance": 80.99553535132937
+    },
+    {
+      "address": "FWUnDTPjJjJk4ZCLFbCsNLGEWDesHUYnEewh9smXK2Fh",
+      "skor": 15,
+      "pnl": 0.003883665996475827,
+      "balance": 7.5178850770181365
+    },
+    {
+      "address": "FXNeSCnueEygmL4QpzgYUZnSmitsPb5xSPkEF1qgT9Z9",
+      "skor": 15,
+      "pnl": 43.72195231106079,
+      "balance": 26.28245781068412
+    },
+    {
+      "address": "FeTquSkh84nYtaLXedE8AKGQVjJgoK554wo1tcgLz9gs",
+      "skor": 15,
+      "pnl": 0.06915095771887536,
+      "balance": 87.04166931446206
+    },
+    {
+      "address": "GTHWXgaVSZkgZBxrCVwEEcHHpfsnyHE9zwnfwLWCbgGP",
+      "skor": 15,
+      "pnl": 0.1846645575317396,
+      "balance": 59.87242285098119
+    },
+    {
+      "address": "GTXwzuxdmvnUyFxZQkDGVHMKUGCqBdCip1rZAbAwvZnQ",
+      "skor": 15,
+      "pnl": 2.6180504486301075,
+      "balance": 97.97216062807618
+    },
+    {
+      "address": "GbW7xQkCAsz44QPh8h5x3iV2GxEoZktDEfQ8Ek8RP5sz",
+      "skor": 15,
+      "pnl": 0.04809542377789455,
+      "balance": 76.4255848830359
+    },
+    {
+      "address": "GusDNfWtesdfcGsZ75CaQ658v4A1Eea8esWtEtAHDFDE",
+      "skor": 15,
+      "pnl": 0.05333312691873715,
+      "balance": 53.348229562831584
+    },
+    {
+      "address": "GxXiqATvyZcmdoDrzorQieAqvKw5XjZv9fJa28WZTBoQ",
+      "skor": 15,
+      "pnl": 0.7796989343767962,
+      "balance": 76.84985118578261
+    },
+    {
+      "address": "HUcjzpA5ZqCwaTUcyr7kF9GhPNK3hxxndfvjo8TcbTsQ",
+      "skor": 15,
+      "pnl": -13.399754074797329,
+      "balance": 4489.394449306668
+    },
+    {
+      "address": "3sQHjHaYX2W2xK3cgdCvUg2VzXKuoXAwugdz9U1h2oS4",
+      "skor": 10,
+      "pnl": -2203.860241840774,
+      "balance": 25360.859617646747
+    },
+    {
+      "address": "83jGbBFXdFxU6uCfoieVip3hcGd4q9xVpt3NSGb91Lr3",
+      "skor": 10,
+      "pnl": -4686.363234725488,
+      "balance": 38342.15302485261
+    },
+    {
+      "address": "2BqTvkdyMMXk1aFThvRa9VcSeFG9i3iP8GAj2F6azX1y",
+      "skor": 5,
+      "pnl": -21.251890837935434,
+      "balance": 4297.107122591345
+    },
+    {
+      "address": "3TJ34RENqx1mthARWiyKGWbjQTCWdyXe2BgWhJYBJ8xW",
+      "skor": 5,
+      "pnl": -18.119083579424583,
+      "balance": 237.96389596312704
+    },
+    {
+      "address": "3gYCHe6bVg7wJm8y77Hn9Z1adWiNSp5jFPay8CdYNW17",
+      "skor": 5,
+      "pnl": -33.143245055403526,
+      "balance": 852.2164246063483
+    },
+    {
+      "address": "3rutWQYoMdZUB7MDimwzxXkTj8cBo7QjiAPfLE6WFg8J",
+      "skor": 5,
+      "pnl": -8.70864695576364,
+      "balance": 613.9261249635797
+    },
+    {
+      "address": "69ZQovibk7mKpGHkoct9VtJMeo7zyQWoVXMv5FGrwBC6",
+      "skor": 5,
+      "pnl": -2.0224865845887,
+      "balance": 2230.151759301651
+    },
+    {
+      "address": "94XJhFKYZqru2MnK3bng5GK7kU6sYReZcve7fgCd1MvG",
+      "skor": 5,
+      "pnl": -41.084436943183356,
+      "balance": 157.2582098923045
+    },
+    {
+      "address": "CTeN9zT4qyy3zdupCerbSDFYMQZBEwLTNM3XiLpC22Wq",
+      "skor": 5,
+      "pnl": -25.990761627590373,
+      "balance": 1174.5300771811628
+    },
+    {
+      "address": "DwuBZfekwUbARgcfASXufhqrpjZ9QnWfAdLpC2nfEdiZ",
+      "skor": 5,
+      "pnl": -174.69773291259565,
+      "balance": 6151.61990010351
+    },
+    {
+      "address": "EBSn5n2RLnbqnFG6qf2oHEYMUVTJrqYooWggCw9hvuR9",
+      "skor": 5,
+      "pnl": -1.1794295398864634,
+      "balance": 299.4561520966966
+    },
+    {
+      "address": "FRJdPgmHSKR3rwtipE8zm2D311Z8CwPvNtSpmWbNyzMz",
+      "skor": 5,
+      "pnl": -7.15541126657119,
+      "balance": 139.11786698785974
+    },
+    {
+      "address": "GLDJbSkjwSX3BHDpEFV32UJTjGRFJLQJkLUoAtE7vmjZ",
+      "skor": 5,
+      "pnl": -0.631154509952438,
+      "balance": 138.20155122610544
+    },
+    {
+      "address": "Gj7gcmVi5PAsbAdNs78MSkXQsaJAEk6NTSbHTB3iJWqJ",
+      "skor": 5,
+      "pnl": -0.845212215054346,
+      "balance": 1570.5998699910158
+    },
+    {
+      "address": "3zfQPqjuWvpmJrYvecDfcagkT6RpTNYyUpeGU1NtYPk4",
+      "skor": 0,
+      "pnl": -6.10249847283194,
+      "balance": 20859.753159849803
+    },
+    {
+      "address": "3amrLy8HrAz6fvxeABa7S2UoGnwhZMvVJ5jSvc1CUcxn",
+      "skor": -5,
+      "pnl": -2.8693255452015762,
+      "balance": 175.00080786524057
+    },
+    {
+      "address": "43ZRJFc8363zgqF7Ysyr6WK8bW5Ev5hjXGzhBqeoYkeF",
+      "skor": -5,
+      "pnl": -0.9496654635131705,
+      "balance": 441.35990396954384
+    },
+    {
+      "address": "4QbeE2mXksvmnYaevNqxBy5fAuJxjxi8P7Ya8yG1tbCL",
+      "skor": -5,
+      "pnl": -0.842724947079887,
+      "balance": 1043.9989937581581
+    },
+    {
+      "address": "66Mccg5AzxRsMZHFXKERXheBBwxs3S7MzFgnbqCYoxtH",
+      "skor": -5,
+      "pnl": -98.76035355679863,
+      "balance": 307.90679088267854
+    },
+    {
+      "address": "6ie1LcsfPwvt9g9eL5FiT9QZn4n53X2hGbaWdjrJceS4",
+      "skor": -5,
+      "pnl": -60.3927901496927,
+      "balance": 1087.5401981999091
+    },
+    {
+      "address": "7MKE886cJLAS9K5aqMfHRFsFotZjmbjBxQCyYGkWMuCq",
+      "skor": -5,
+      "pnl": -18.671006651251332,
+      "balance": 114.54569978567315
+    },
+    {
+      "address": "8E8VBwYkrsG6yU5aK1y5QPh42yRdZkFjHYDA8ZMCL3Ce",
+      "skor": -5,
+      "pnl": -59.23611243062123,
+      "balance": 1344.046920714667
+    },
+    {
+      "address": "8Guqk5BTLETo1bnuph6DKWMVo7cms6zSvBuasoVr8nfV",
+      "skor": -5,
+      "pnl": -0.8425671881046526,
+      "balance": 573.611324823207
+    },
+    {
+      "address": "9GQADBhZqKJCe6U5Bg71FAKvw2b7NGQFrXTZwZ1bNZbj",
+      "skor": -5,
+      "pnl": -0.2755463256598887,
+      "balance": 8448.952725773872
+    },
+    {
+      "address": "9qGKjN8ZQqPpDuGTLpa77K5xRe2UMw4c7m9348XpyCRf",
+      "skor": -5,
+      "pnl": -3.140510813652469,
+      "balance": 533.5473475237404
+    },
+    {
+      "address": "BBRQTNHRKJgbXKcRrr7c9NNj6KAD9sc83Lw9ce9TVUfb",
+      "skor": -5,
+      "pnl": -0.8578398206518614,
+      "balance": 2264.6079785957327
+    },
+    {
+      "address": "BSN4MBGCuTdHnVnKeDSkDrUxfEZJB3acymPe1PM9jrPs",
+      "skor": -5,
+      "pnl": -22.69434298307158,
+      "balance": 369.0144339623011
+    },
+    {
+      "address": "BsAU1kfJNRUhMahaGvBDzevQmre1mQQG59bBR76E77J7",
+      "skor": -5,
+      "pnl": -0.8408364537215505,
+      "balance": 126.31114058486669
+    },
+    {
+      "address": "C5KdMMFB9xqHRYpGFV5aYfqQ7noYEJdGjnsj6RyUCwg3",
+      "skor": -5,
+      "pnl": -153.0637073281473,
+      "balance": 2059.724952092887
+    },
+    {
+      "address": "CeHaE5nTsj2dZAsbVdW5wgUcoVTuncd97UVcpci3uFcY",
+      "skor": -5,
+      "pnl": -1.3819310811537093,
+      "balance": 112.06438695478948
+    },
+    {
+      "address": "CkNEo3fcgwGQqLxtCat3qmCmUbAp9wUdHd2odkqpxfaU",
+      "skor": -5,
+      "pnl": -726.9712508356383,
+      "balance": 138.28886828486904
+    },
+    {
+      "address": "CxckY4H3vY2Eve9YxD8ANNaFLXdC637BAC88f9DSZuLA",
+      "skor": -5,
+      "pnl": -3.8732353367226153,
+      "balance": 976.3793524130117
+    },
+    {
+      "address": "DTToTj8vRzKoe6nc8mjnQ1D8Du255wnwmZCmVYNXGrBR",
+      "skor": -5,
+      "pnl": -0.4984434673782232,
+      "balance": 127.90891739637954
+    },
+    {
+      "address": "DZjm5w6Z7xr4sb4TfPor2DTaFSfuEf4X2BExZ4bzay4f",
+      "skor": -5,
+      "pnl": -1.6608141396331035,
+      "balance": 50.33330946577558
+    },
+    {
+      "address": "Dq2s9pShfQqrPTP8sAKELnzwDVe7igS11n32z8gsJgs2",
+      "skor": -5,
+      "pnl": -33.11031643430783,
+      "balance": 3084.1179697360117
+    },
+    {
+      "address": "EeTNKH7NpLxAMcAqMVtwEaDeHjCSNtHM2tuwgWgBPRSj",
+      "skor": -5,
+      "pnl": -1.9166828040890778,
+      "balance": 1721.9280181506683
+    },
+    {
+      "address": "FDhvPubaTgM61iig5FBB9TYAvNw3cfGe7kUJ8M8rRBz9",
+      "skor": -5,
+      "pnl": -164.03422311037605,
+      "balance": 448.9590642205932
+    },
+    {
+      "address": "FroGc9omDJpfZnaZGeMHxyTbnLisPpq3XJChFMYguBAj",
+      "skor": -5,
+      "pnl": -3.8099760237503517,
+      "balance": 442.8782271803284
+    },
+    {
+      "address": "Fto3gHHqXPg5NSGxk6AoEjhZYkY55XE4SqRx2T7XaDB9",
+      "skor": -5,
+      "pnl": -75.90728063898433,
+      "balance": 146.61014427611167
+    },
+    {
+      "address": "GZ3d73ZHedK8fNDZozuEontUKq4EdEEYpeSMYXkDj1zx",
+      "skor": -5,
+      "pnl": -0.29213908188776827,
+      "balance": 454.534885032405
+    },
+    {
+      "address": "Hgndo1XMYcYZdsZBX4dE3KnNytYTfrnRe8hjwFeVKQao",
+      "skor": -5,
+      "pnl": -3.6450086231805354,
+      "balance": 150.2345164237732
+    },
+    {
+      "address": "2JgJ29CVCC1VYPANaXqkzQHNo68cXvLV5jSQxB8Y3JJ2",
+      "skor": -10,
+      "pnl": 0,
+      "balance": 0
+    },
+    {
+      "address": "6X5eFh7GiAuJQG5ZGKZQaCXpHYRNeHbqErJpVT8M6Sr1",
+      "skor": -10,
+      "pnl": 0,
+      "balance": 0
+    },
+    {
+      "address": "9M27ztqgkeVmisEuhDMKZKKFghnv2jfbBarqMHLwHwgE",
+      "skor": -10,
+      "pnl": 0,
+      "balance": 0
+    },
+    {
+      "address": "247ohAUQEer61QCmHX5SGg34PBve2djy5TahKwQhf72i",
+      "skor": -15,
+      "pnl": -4.065737504857054,
+      "balance": 367.3387771870953
+    },
+    {
+      "address": "3XFkaVMgokmGxtEtXSqLQ37a82SQ7B5qvTkTp6sRH4k6",
+      "skor": -15,
+      "pnl": -7.798648148407892,
+      "balance": 594.1885707752898
+    },
+    {
+      "address": "3rt2CRJySEkyfWUjLsffac5zZreXfQpM5C26YWKn7izi",
+      "skor": -15,
+      "pnl": -12.884070074348756,
+      "balance": 730.4578960163462
+    },
+    {
+      "address": "3wuBE267RGfsSi1wws3ADhL2ffdX66ZfXVhsa8DJc3cd",
+      "skor": -15,
+      "pnl": -4.019969151263901,
+      "balance": 113.00292312381329
+    },
+    {
+      "address": "44GEFcQk6UP9dUV1r5iUNMsfyWvc1noNhFPSttZFP7AX",
+      "skor": -15,
+      "pnl": -0.3375070913978675,
+      "balance": 236.9247210468228
+    },
+    {
+      "address": "4acqmVwBrE88isYF37jU9dBYj31GXc9tF1tpa2SVHgHd",
+      "skor": -15,
+      "pnl": -0.5722336734375091,
+      "balance": 414.0935956387978
+    },
+    {
+      "address": "5QtV3zuom8mYk99jJKP9nBTTZguPiZVMC1BufXJ1QcB2",
+      "skor": -15,
+      "pnl": -35.037830702825815,
+      "balance": 570.0632812387655
+    },
+    {
+      "address": "5TqZmKk9zwZ4tXtePQkbz6111yrMg3C76Rk5vBnGkfJc",
+      "skor": -15,
+      "pnl": -17.660308958857684,
+      "balance": 580.8616942206771
+    },
+    {
+      "address": "5cwRR2ksXG6NwPYMY6N27kQj1bwU9W5ZXnhnS9s7Dgm3",
+      "skor": -15,
+      "pnl": -0.01695081914573393,
+      "balance": 227.99255472322363
+    },
+    {
+      "address": "5tMsbfLJndoH6kAwB73qbLUNjpVjxLqfna2YgyNJiimW",
+      "skor": -15,
+      "pnl": -0.10873775002659869,
+      "balance": 122.87521245839648
+    },
+    {
+      "address": "6Gsjssm7u4i4TTbD51nxxmcpuKBN17T1QcpSSbNDwaGc",
+      "skor": -15,
+      "pnl": -9.695538761318346,
+      "balance": 336.7078627786986
+    },
+    {
+      "address": "79GFAQgkYRCBJHnsyEJivk8vB21qFKPYq1wd2CGazr3B",
+      "skor": -15,
+      "pnl": -40.0491726408643,
+      "balance": 713.5663703580177
+    },
+    {
+      "address": "7BiWqHGkcr2RgAgjLHimSzN7RTTcAvZXGW5DLvUiz6pe",
+      "skor": -15,
+      "pnl": -0.7148792348322104,
+      "balance": 609.1016314661805
+    },
+    {
+      "address": "7hLE8HiBXQ9gcgFWYKUeKcKbZ6RcLDKou7o1nLxHnhxE",
+      "skor": -15,
+      "pnl": -1.2119818284719486,
+      "balance": 553.0081252302317
+    },
+    {
+      "address": "8LSTN6e7kbhv6A7ynzR3qjp7u7hoG71tQGwwcKdkAk2h",
+      "skor": -15,
+      "pnl": -136.75323500648165,
+      "balance": 904.2853245961803
+    },
+    {
+      "address": "8Pb3qbZiy3MPMeRxKHvJPDwLQbeh1hPg8bXMzmvrc5W6",
+      "skor": -15,
+      "pnl": -0.28045186893274376,
+      "balance": 299.7614101081397
+    },
+    {
+      "address": "8rs5L6Mh7pUN59g4T1bjPHWBcVxMp9cH713FL1QhEXAn",
+      "skor": -15,
+      "pnl": -1.3814228172792014,
+      "balance": 445.08366924893005
+    },
+    {
+      "address": "9T7r8krz6WWgUtSKZQ4WQnkwpzyDnLpxd86nnkw2YqoL",
+      "skor": -15,
+      "pnl": -2.412728654964269,
+      "balance": 298.4583064182645
+    },
+    {
+      "address": "9WMJfjv5h5gwtJ9H26TEvw435b1zXjXb4ao92RFNExNJ",
+      "skor": -15,
+      "pnl": -0.7365649275518251,
+      "balance": 118.49070663376041
+    },
+    {
+      "address": "9XWECMNmva22nQ6usNdPcJJvmrSWjKAXK5WNDQinABwX",
+      "skor": -15,
+      "pnl": -6.329392612753452,
+      "balance": 595.557951009871
+    },
+    {
+      "address": "9auTYvjdwKdXQp15wdNuixABAKG8PbcHtNyrYsd6Ljk4",
+      "skor": -15,
+      "pnl": -27.738831945304526,
+      "balance": 238.3414833634669
+    },
+    {
+      "address": "9avxFXAF8TCb1CbCLvFEtozsWVK61wkGDqZ9vomsGHo9",
+      "skor": -15,
+      "pnl": -3.0239834438144726,
+      "balance": 787.4263818045566
+    },
+    {
+      "address": "9kpE3MP1MWyvpJGXvhuEg4ve5KvrekTetBGMRDHMytF3",
+      "skor": -15,
+      "pnl": -0.05138362928227025,
+      "balance": 327.54618367579144
+    },
+    {
+      "address": "9nvYU5BgkVPraUgDqQrcQquJtrJRx5fSQ9K25ksJUzG6",
+      "skor": -15,
+      "pnl": -1.0634864471381889,
+      "balance": 418.8445757026208
+    },
+    {
+      "address": "AQ9Ek7MRriBPxAThyJXdQsjzdZXrNPFowUcF3j2DD9jU",
+      "skor": -15,
+      "pnl": -2.1898581212677186,
+      "balance": 352.48152761429725
+    },
+    {
+      "address": "AYxfbdEAvkhJQeTCfchSBuFUW1jW8vCVJV9H4bAuiKfS",
+      "skor": -15,
+      "pnl": -1.8781972881765228,
+      "balance": 297.0945086053234
+    },
+    {
+      "address": "B8rZLEgZaZQr5VCcVykUw1Fn3VCp8AjrnpLjQwVUvBpb",
+      "skor": -15,
+      "pnl": -5.055889929642589,
+      "balance": 115.21473387363224
+    },
+    {
+      "address": "BPjNvrMKdkvGx6iMrLoKsdcACvgPjtnZWXm31HmTRygs",
+      "skor": -15,
+      "pnl": -0.12943146383696558,
+      "balance": 380.81677444160397
+    },
+    {
+      "address": "BcYx7TASW4J3DxcQkkBd3B6HCkEt8ZNB9zuv6mwtSGj8",
+      "skor": -15,
+      "pnl": -0.13160823156290036,
+      "balance": 106.92284509739864
+    },
+    {
+      "address": "BuJ2CnRKUFTeqf41dcYP5WpyhRcBf7rndJ8oEQiBxsgM",
+      "skor": -15,
+      "pnl": -113.26410247904653,
+      "balance": 238.55549039638117
+    },
+    {
+      "address": "CimY5rSaigquLhHVgTD3PEe4iXmcVqWQGkusG57aniFN",
+      "skor": -15,
+      "pnl": -0.8418925607468708,
+      "balance": 181.58193191564033
+    },
+    {
+      "address": "DXTaXQrDocFZBfSEkcgnNCpUuj8xeb6VqyZ4ZzPe518V",
+      "skor": -15,
+      "pnl": -6.240824753937204,
+      "balance": 818.5751067485147
+    },
+    {
+      "address": "DbTPt5K4eHWo2hKa1MB2MhVuAj5qqgZ5L2ok4nxm3R3f",
+      "skor": -15,
+      "pnl": -8.72804771961966,
+      "balance": 554.5294693791991
+    },
+    {
+      "address": "DgFht3nTDJkatfqo9qF5sneMSJRAkdEi49SDTUnjMg3y",
+      "skor": -15,
+      "pnl": -7.556814670183684,
+      "balance": 206.05505144854135
+    },
+    {
+      "address": "EEQvZyZhU7nSvRHhFvEaSZhyHMzB7NHJeJmHx1oY8WKe",
+      "skor": -15,
+      "pnl": -10.74053512754,
+      "balance": 953.3711851260455
+    },
+    {
+      "address": "EFsYwVzMKJgH6Xt6i2aNPXuXQThePxEeQRNrnmdM2ipP",
+      "skor": -15,
+      "pnl": -0.987829440777432,
+      "balance": 835.7289545108993
+    },
+    {
+      "address": "FLpERfJXRxWE4UGBH76n76jRzEGrH9tifKrV2STuDDw2",
+      "skor": -15,
+      "pnl": -2.4127286671832167,
+      "balance": 298.45830640604555
+    },
+    {
+      "address": "FanRbPtJjUBie5ihsvPZbZApB279Fmd8xkGx1EaH2PFJ",
+      "skor": -15,
+      "pnl": -0.7500827454675161,
+      "balance": 102.51881284469299
+    },
+    {
+      "address": "FyRe6exmXqBh77QQWwzYHQ4cJh2LSAkc3Pfp4XJR7enS",
+      "skor": -15,
+      "pnl": -161.91065098590644,
+      "balance": 483.79424805829154
+    },
+    {
+      "address": "GeLxFbHDYTp82E2BAVu8zWoYsV3zXUYWurjyxvApjJzq",
+      "skor": -15,
+      "pnl": -20.06929486274919,
+      "balance": 726.0958349779465
+    },
+    {
+      "address": "GrZcX3b1AL4gQSVt7ZMJNuMPnJA3DxyoiXgj8Hd46byg",
+      "skor": -15,
+      "pnl": -1.0478149932064298,
+      "balance": 178.92535255724079
+    },
+    {
+      "address": "Gx6FUepXL3Mco6WNwZAhJgVFcmrY8yjv1ti6SVfibLn2",
+      "skor": -15,
+      "pnl": -1.4518760520545015,
+      "balance": 387.68368727339947
+    },
+    {
+      "address": "HHsomb1ihwMu8mDzQTNiMuBdAaEZKxHzCfBkswCs39Fo",
+      "skor": -15,
+      "pnl": -0.2789887407971037,
+      "balance": 140.7283809469434
+    },
+    {
+      "address": "HbefYtDKdYPASyu2UXmYkadMyoNRu61tvTzwXr23AAK1",
+      "skor": -15,
+      "pnl": -2.34602131733908,
+      "balance": 255.35017066344946
+    },
+    {
+      "address": "3MrYXTc4KMGCcsYzbKvSKT18juSomvFYh4hPmTaiFiqk",
+      "skor": -30,
+      "pnl": -27.11832186735472,
+      "balance": 79.83948934665236
+    },
+    {
+      "address": "3vnyNHDGKzUeZKeyxyriLE1QXNpRwyZ2VdzSc6xnibiz",
+      "skor": -30,
+      "pnl": -0.08292628332851226,
+      "balance": 22.88067494074294
+    },
+    {
+      "address": "8wTT7opEVkpfTWYRhMJqxCFr3iJvJ5k6UB977JcDHRCz",
+      "skor": -30,
+      "pnl": -1.082501912158369,
+      "balance": 33.688706936432126
+    },
+    {
+      "address": "BpeYn5AQ2zkr4ngHPwE7DAhxZzSo77jPH5h57E967aua",
+      "skor": -30,
+      "pnl": -0.25687040133087535,
+      "balance": 86.56549480433058
+    },
+    {
+      "address": "CvAiP5REaVmhRU9DeeJUxJdrLsud8qsmnGh3zihiwrci",
+      "skor": -30,
+      "pnl": -8.210898747408644,
+      "balance": 58.24240257643472
+    },
+    {
+      "address": "2MhtSTm3yGmzaqX9PZ2ioMWjdgviFgRc4S4u5Goa5ecL",
+      "skor": -40,
+      "pnl": -3.101023359548595,
+      "balance": 18.498612747443676
+    },
+    {
+      "address": "2p5UHUJNmF4p21cC8pq8gNrfP1a6oYxfrWg1Ta2rSVwZ",
+      "skor": -40,
+      "pnl": -0.5667367173887143,
+      "balance": 56.352342159254334
+    },
+    {
+      "address": "3VRNrReVHbMbKKRo2vNGZ7WrDYq2Y2jkcFYb1tqnX4Gd",
+      "skor": -40,
+      "pnl": -2.4480948877097957,
+      "balance": 6.718528495209633
+    },
+    {
+      "address": "4F6jwaTzvbPvnSC6KdiAAjoMHqKpCzN7qWYHo3gFjV6j",
+      "skor": -40,
+      "pnl": -0.008137416817454834,
+      "balance": 35.78517130872871
+    },
+    {
+      "address": "4Nmgs2CeLY6Zut7EkW9KnG5miovupu7HveewWnPig4VV",
+      "skor": -40,
+      "pnl": -0.09619466526967813,
+      "balance": 36.73966709125314
+    },
+    {
+      "address": "4PSnkSNXCiTeCLasQb98uC5JDgNDhTDiUF3d49WVvZHj",
+      "skor": -40,
+      "pnl": -0.872149281686319,
+      "balance": 98.08235195158505
+    },
+    {
+      "address": "4YjBmsVH5eL9Yg5Z5xJRAMVcvUnfpHWvrLeGroCUMHnZ",
+      "skor": -40,
+      "pnl": -1.2678913120633268,
+      "balance": 30.29599489870747
+    },
+    {
+      "address": "4fWe6q52qnB3rabD3anVwNAVAS1LugPC8GNN7petk1wH",
+      "skor": -40,
+      "pnl": -0.11635605108328662,
+      "balance": 25.41334135313687
+    },
+    {
+      "address": "59ciF32fttSTSTqq4bN7kC9AcHFFETjbgmeV21oe99qf",
+      "skor": -40,
+      "pnl": -0.3776637969405101,
+      "balance": 34.25417407905563
+    },
+    {
+      "address": "5RKAkVkKVjhRWfPXTDDQAEKjEgGwzvVt3zwdQRGdsVWi",
+      "skor": -40,
+      "pnl": -0.18101601284436697,
+      "balance": 83.15135354184311
+    },
+    {
+      "address": "6TCtwZ9NnZ7mUW21MqLRQtyfWq7UzxVAg1TvP7NBPFiw",
+      "skor": -40,
+      "pnl": -0.4190506270758476,
+      "balance": 65.83273764621586
+    },
+    {
+      "address": "6nt3S41HncNZhFShogJAASLjKqtax7h3ZWNjrJR286Kp",
+      "skor": -40,
+      "pnl": -0.009065980887271508,
+      "balance": 75.32482176390081
+    },
+    {
+      "address": "6qu1HbTGnwa8GPkD8F6Dsu1puQzVzhbDortyxQPv3Rdz",
+      "skor": -40,
+      "pnl": -0.004277489298701198,
+      "balance": 98.33590707505091
+    },
+    {
+      "address": "6voX2N2gFmCwfx6VAUUM2RuBgehTn3cfZ9CVSXxiTd1d",
+      "skor": -40,
+      "pnl": -0.041507383910612816,
+      "balance": 75.84275973299773
+    },
+    {
+      "address": "7UBnep2BY4KdUTgr4sa7eTKimaowLjNvLy7aqXbPvjew",
+      "skor": -40,
+      "pnl": -0.21559016012424337,
+      "balance": 28.56880192819626
+    },
+    {
+      "address": "7udf2GiBprCG3v5EtbSbo5q9BMY7CszkLVn7ffqRKqRj",
+      "skor": -40,
+      "pnl": -0.00815303728695227,
+      "balance": 8.356600632063643
+    },
+    {
+      "address": "81oSLFqmC9wUT5iGbNXmyMSwBXKQqzY3HmDRUDsM4uEx",
+      "skor": -40,
+      "pnl": -0.24372043649220032,
+      "balance": 12.025337975871741
+    },
+    {
+      "address": "8JMxeZrdr7VicNz9eqGpwy9kGiy6xLYamvKnLo2xrE8j",
+      "skor": -40,
+      "pnl": -0.20996626126979834,
+      "balance": 39.41283370414543
+    },
+    {
+      "address": "AJscix3iogC3RjQkEEHkfykAcih6duD2HkqPrKFMx6UR",
+      "skor": -40,
+      "pnl": -0.9882146955411439,
+      "balance": 11.680329056925892
+    },
+    {
+      "address": "ANGPAChgjec5MbfBysPZEKYH2PEP6AT8FVivTAN4ViwT",
+      "skor": -40,
+      "pnl": -0.5661128081581985,
+      "balance": 12.980984915744019
+    },
+    {
+      "address": "Ahpd7PAJip4hw8xysCAdSfTQQriP9VSEss3WzJHfg9i6",
+      "skor": -40,
+      "pnl": -1.265808878840602,
+      "balance": 73.61970071198165
+    },
+    {
+      "address": "AxovBeT1gxn5mbfuP9sE5GHdv4EwuPPkmu826udhj1vz",
+      "skor": -40,
+      "pnl": -0.25878363867055754,
+      "balance": 47.90270694687546
+    },
+    {
+      "address": "B1Q9MJRp77cqW2TBsKzAkBeMr4bwf9DxfRQqVKvnCsQm",
+      "skor": -40,
+      "pnl": -0.03532106709956295,
+      "balance": 22.55969256857274
+    },
+    {
+      "address": "B2xHThb8cbnQkQdton4Kbdd2hbaRrkhwKmw5M3FCMURV",
+      "skor": -40,
+      "pnl": -0.21815598880626652,
+      "balance": 37.532673815230446
+    },
+    {
+      "address": "BJoWDLMd94DMiGnwbZAQ3EYrYisA381rrZA7JrPCRA9R",
+      "skor": -40,
+      "pnl": -7.540973965313228,
+      "balance": 76.51678924727652
+    },
+    {
+      "address": "CAGrP21ya6knWd3SZvpvj4UmXQHhNgh7G2hmN6gt1h5W",
+      "skor": -40,
+      "pnl": -0.04727827613489666,
+      "balance": 75.98874158963037
+    },
+    {
+      "address": "CFpZZnZzZ1rwkZBc96VFggHz1vsNumvKd9oe5b4vfjok",
+      "skor": -40,
+      "pnl": -1.2052246520210232,
+      "balance": 22.89299341332446
+    },
+    {
+      "address": "CGwh6aHQzVxmVh2kFK4dpZp6ecKVwKZxgsz7cfuKaD2R",
+      "skor": -40,
+      "pnl": -0.0010119875387459842,
+      "balance": 62.58300211988682
+    },
+    {
+      "address": "CbWCVXt2dfC5cofdg2DsDcSMDbdHRy3mewivqH5wQoFs",
+      "skor": -40,
+      "pnl": -0.034176667768043956,
+      "balance": 37.920703341982644
+    },
+    {
+      "address": "CsRHYxFQA9AtiKFAmuJEkZTZyCQhZL2UvATePGaaQodk",
+      "skor": -40,
+      "pnl": -0.03788246574457155,
+      "balance": 15.278997057601327
+    },
+    {
+      "address": "D1GLbPDcNCf49kK6m7WtYoz3Py82pS6NQcv1vk9eRigX",
+      "skor": -40,
+      "pnl": -0.16233516777293744,
+      "balance": 37.18830167744343
+    },
+    {
+      "address": "DGcJvZMgrMMartPhwW7QVKPhx7h7yCtvKALLppc1WhHT",
+      "skor": -40,
+      "pnl": -0.973905269948844,
+      "balance": 13.574320746059662
+    },
+    {
+      "address": "DJKehcHmurWbuzXchK4Juj2aJCvTa8LXvmJcMn7VSBK9",
+      "skor": -40,
+      "pnl": -0.5808405902255771,
+      "balance": 83.26688605405623
+    },
+    {
+      "address": "Dgr4PoLSzfCebwKgRo8eTgmoW1gwe1yaARdJvcjcEPAj",
+      "skor": -40,
+      "pnl": -0.156025889901513,
+      "balance": 3.574526812057944
+    },
+    {
+      "address": "Dyz4YDdGSP6nrwiceuzhwzXpVXqfhHp59J8xjqvxVFz8",
+      "skor": -40,
+      "pnl": -0.3127728562460277,
+      "balance": 74.51080891342937
+    },
+    {
+      "address": "EaXerGgHcBiJLK5imqw7rVHSGuGwAEswgs8u1nVnsMvF",
+      "skor": -40,
+      "pnl": -0.05896995502296676,
+      "balance": 18.88806758586519
+    },
+    {
+      "address": "F6VJRZB5NuVdx2kwSMZDsmNix6WHwfn5Gpe9hQ69Gshc",
+      "skor": -40,
+      "pnl": -4.444716496476225,
+      "balance": 48.226535535859426
+    },
+    {
+      "address": "FXzYu1BJ7qLQfDD3oXk49NVki7QJKnRUFFYeRajRaSBu",
+      "skor": -40,
+      "pnl": -0.7660824872151046,
+      "balance": 20.310932920101738
+    },
+    {
+      "address": "G1QNrMmSgm82Zg3hLShoLzLcYZHxGfT3zGNf7AaUnSeh",
+      "skor": -40,
+      "pnl": -0.43745730117992565,
+      "balance": 75.33796180767511
+    },
+    {
+      "address": "G344dmNVBusg3vEJKUYJGKULZ2PX3o16ZPUpeHXgfDVm",
+      "skor": -40,
+      "pnl": -0.22675802849507676,
+      "balance": 41.96047284512993
+    },
+    {
+      "address": "GRXgH5zFBE31dFZ1yjhBdA2w75cWGfN3pq9U97uoTAh3",
+      "skor": -40,
+      "pnl": -1.0802677584075198,
+      "balance": 0.009164341477316883
+    },
+    {
+      "address": "GcyyUs79VfPn2ywUm1ENHQmUn2DPjCgEQgBsUbhRSyQu",
+      "skor": -40,
+      "pnl": -9.070687695903079,
+      "balance": 21.873657050102427
+    },
+    {
+      "address": "GmotU8zWsLamJbcKNsmcGhP9AXGJyzB13XBfhHamB6MT",
+      "skor": -40,
+      "pnl": -1.471650597369873,
+      "balance": 74.11909254281473
+    },
+    {
+      "address": "HfRwCPt6ckcAT3rKEGLAey5wxoZ1xonDgySjRP3qF3UF",
+      "skor": -40,
+      "pnl": -71.20346892200584,
+      "balance": 0.7211198176670148
+    },
+    {
+      "address": "HhgU9itQXqW3yGPguBSPpdYCyaySUKFfKHAYsAxLB5fx",
+      "skor": -40,
+      "pnl": -7.217675465755811,
+      "balance": 30.567665289206634
+    },
+    {
+      "address": "J7ycveDYzRVUK1KkC9MSCw5jgqe3gbcuEHqWXJGaapvT",
+      "skor": -40,
+      "pnl": -0.8232425433456285,
+      "balance": 71.71602709537066
+    }
+  ]
+}
