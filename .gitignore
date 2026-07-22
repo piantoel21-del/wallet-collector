@@ -4,4 +4,6 @@ node_modules/
 logs/
 collected-wallets.json
 wallet-analysis.json
+wallet-classification.json
 trending-pools.json
+*.pdf

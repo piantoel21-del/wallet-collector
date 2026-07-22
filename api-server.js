@@ -166,9 +166,23 @@ function handleRequest(req, res) {
     return;
   }
 
+  // GET /changelog — riwayat update wallet collector
+  if (url.pathname === '/changelog') {
+    try {
+      const changelogPath = path.resolve(__dirname, 'CHANGELOG.md');
+      const content = fs.readFileSync(changelogPath, 'utf8');
+      res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
+      res.end(content);
+    } catch {
+      res.writeHead(404, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: 'CHANGELOG.md not found' }));
+    }
+    return;
+  }
+
   // 404
   res.writeHead(404, { 'Content-Type': 'application/json' });
-  res.end(JSON.stringify({ error: 'Not found', paths: ['/health', '/api/smart-wallets', '/api/smart-wallets/raw'] }));
+  res.end(JSON.stringify({ error: 'Not found', paths: ['/health', '/api/smart-wallets', '/api/smart-wallets/raw', '/changelog'] }));
 }
 
 export function startApiServer(port) {
@@ -178,6 +192,7 @@ export function startApiServer(port) {
     console.log(`  🌐 API Server: http://localhost:${p}`);
     console.log(`     GET /api/smart-wallets  → ${_cache.data?.total || 0} SMART wallets (Meridian format)`);
     console.log(`     GET /health             → health check`);
+    console.log(`     GET /changelog          → riwayat update`);
   });
   return server;
 }

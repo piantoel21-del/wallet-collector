@@ -133,6 +133,7 @@ function sendStartMenu(chat) {
       [{text:'👛 Daftar Wallet', callback_data:'nav_wallets'}],
       [{text:'📊 Statistik', callback_data:'nav_stats'},{text:'🏆 Top 5 PnL', callback_data:'nav_top'}],
       [{text:'📋 Klasifikasi Wallet', callback_data:'nav_classify'}],
+      [{text:'📝 Changelog', callback_data:'nav_changelog'}],
     ]
   );
 }
@@ -174,6 +175,37 @@ function sendTopWallets(chat) {
     msg += '   📊 Positions: '+w.open+' | Type: '+w.type+'\n\n';
   }
   tgSendKeyboard(chat, msg, [[{text:'← Kembali ke menu', callback_data:'nav_menu'}]]);
+}
+
+// Send changelog
+function sendChangelog(chat) {
+  console.log('  [TG] sendChangelog called for chat ' + chat);
+  try {
+    const changelogPath = path.resolve(__dirname, 'CHANGELOG.md');
+    console.log('  [TG] changelogPath: ' + changelogPath);
+    const content = fs.readFileSync(changelogPath, 'utf8');
+    console.log('  [TG] changelog content: ' + content.length + ' chars');
+    const maxLen = 4000;
+    let remaining = content;
+    let part = 1;
+    while (remaining.length > 0) {
+      let chunk = remaining.slice(0, maxLen);
+      const lastNewline = chunk.lastIndexOf('\n');
+      if (lastNewline > 0 && remaining.length > maxLen) {
+        chunk = chunk.slice(0, lastNewline);
+      }
+      const header = '📝 <b>Changelog' + (part > 1 ? ' (lanjutan ' + part + ')' : '') + '</b>\n';
+      const msg = header + '<pre>' + chunk.replace(/</g,'&lt;') + '</pre>';
+      console.log('  [TG] sending part ' + part + ' (' + msg.length + ' chars)');
+      tgReply(chat, msg);
+      remaining = remaining.slice(chunk.length).trim();
+      part++;
+    }
+    console.log('  [TG] sendChangelog done');
+  } catch (e) {
+    console.log('  [TG] sendChangelog error: ' + (e?.message || e));
+    tgReply(chat, '❌ File CHANGELOG.md tidak ditemukan.');
+  }
 }
 
 async function pollTgCommands() {
@@ -235,6 +267,10 @@ async function pollTgCommands() {
             });
           }).catch(() => tgReply(chat, '❌ Gagal.'));
         }
+        else if (data === 'nav_changelog') {
+          tgAnswerCb(cb.id, '📝');
+          sendChangelog(chat);
+        }
         continue;
       }
       
@@ -249,13 +285,14 @@ async function pollTgCommands() {
       }
       else if (text === '/help') {
         tgSendKeyboard(chat,
-          '📋 <b>Commands:</b>\n\n'+
+          '📋 <b>Commands:</b>\n'+
           '  /start      — Menu utama\n'+
           '  /wallets    — Daftar semua LP wallets\n'+
-          '  /wallet &lt;addr&gt; — Detail analisa wallet\n'+
+          '  /wallet <addr> — Detail analisa wallet\n'+
           '  /stats      — Statistik koleksi\n'+
           '  /analyze    — Analisis batch ulang\n'+
           '  /classify   — Klasifikasi smart/bad wallet\n'+
+          '  /changelog  — Riwayat update fitur\n'+
           '  /top        — Top 5 wallet by PnL\n'+
           '  /help       — Pesan ini\n\n'+
           '👛 Total LP: <b>'+lpWallets.size+'</b>',
@@ -313,6 +350,9 @@ async function pollTgCommands() {
       }
       else if (text === '/top') {
         sendTopWallets(chat);
+      }
+      else if (text === '/changelog') {
+        sendChangelog(chat);
       }
     }
   } catch (e) { console.log('  [TG] Poll error: '+(e?.message||e)); }
