@@ -11,6 +11,25 @@
 
 ---
 
+## [v2.2] — 2026-10-11
+
+### ✨ Fitur Baru
+
+- **CA Analyzer (multi-chain)** — Command `/ca <address>` untuk analisa token dari contract address
+  - Mendukung **EVM** (0x…): Ethereum, BSC, Base, Arbitrum, Optimism, Polygon, Robinhood Chain
+  - Mendukung **Solana** (base58) via Helius RPC
+  - Auto-detect: kirim CA EVM langsung (tanpa `/ca`) juga jalan
+  - Data: harga, likuiditas (pair + agregat semua pool), volume, price change, txns, socials
+  - On-chain: supply, decimals, transfer events, **jumlah holder**, distribusi konsentrasi (top1/5/10/20/50/100), top-10 holder + tanda kontrak/wallet
+  - **Verdict risiko otomatis** (HIGH RISK / WASPADA / NETRAL / RELATIF OK)
+  - Modul: `ca-analyzer.js` (engine) + `ca-format.js` (formatter Telegram HTML)
+
+### 🔧 Perbaikan
+
+- **Fix RPC_URL kosong** — `.env` punya `RPC_URL=` kosong → bot fallback ke `pump.helius-rpc.com` yang sudah mati (ENOTFOUND). Diisi ke `mainnet.helius-rpc.com`.
+
+---
+
 ## [v2.1] — 2026-07-22
 
 ### ✨ Fitur Baru
