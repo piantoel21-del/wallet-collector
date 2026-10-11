@@ -441,7 +441,14 @@ function runChartIndicators(chat, addr, interval = 'hour') {
 async function pollTgCommands() {
   if (!TG_API) { console.log('  [TG] TG_API not set, skipping poll'); return; }
   try {
-    const resp = await fetch(TG_API+'/getUpdates?offset='+tgOffset+'&timeout=5');
+    const ctrl = new AbortController();
+    const to = setTimeout(() => ctrl.abort(), 15000); // jangan menggantung selamanya
+    let resp;
+    try {
+      resp = await fetch(TG_API+'/getUpdates?offset='+tgOffset+'&timeout=5', { signal: ctrl.signal });
+    } finally {
+      clearTimeout(to);
+    }
     if (!resp.ok) { console.log('  [TG] getUpdates status: '+resp.status); return; }
     const data = await resp.json();
     if (!data.result) { console.log('  [TG] no result in response'); return; }
@@ -864,12 +871,22 @@ export default async function startListener(pools) {
       origLog.apply(console, args);
     };
 
+    let _pollCount = 0;
     async function pollLoop() {
-      await pollTgCommands();
+      _pollCount++;
+      try {
+        await pollTgCommands();
+      } catch (e) {
+        console.log('  [TG] pollLoop error: ' + (e?.message || e));
+      }
+      if (_pollCount === 1 || _pollCount % 60 === 0) {
+        console.log('  [TG] heartbeat #' + _pollCount + ' (offset ' + tgOffset + ')');
+      }
       const idle = Date.now() - tgLastActivity;
       tgPollInterval = idle > TG_IDLE_TIMEOUT ? TG_SLOW_INTERVAL : TG_FAST_INTERVAL;
       setTimeout(pollLoop, tgPollInterval);
     }
+    console.log('  [TG] polling START (interval ' + tgPollInterval + 'ms, offset ' + tgOffset + ')');
     pollLoop();
   }
 
