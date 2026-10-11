@@ -11,6 +11,21 @@
 
 ---
 
+## [v2.3] — 2026-10-11
+
+### ✨ Fitur Baru
+
+- **LP Decision Scorer (universal, mode AMAN)** — Command `/lp <address> [size_sol]`
+  - Menilai kelayakan token untuk dibuka posisi **liquidity provider**
+  - 6 faktor dengan bobot risk-averse: Distribusi 25% · Fee Yield 25% · Momentum 20% · Likuiditas 18% · Keselamatan 7% · Smart Money 5%
+  - **Hard veto otomatis** (top10 >60%, holder#1 >30%, liq <$15K, HIGH RISK, crash -80%/6j, indikasi honeypot)
+  - Output: skor 0–100, verdict (LAYAK ≥70 / HATI-HATI 55–69 / TOLAK <55), rincian per-faktor (bar visual), **parameter posisi disarankan** (size SOL, range ±%, SL, TP)
+  - **TIDAK auto-deploy** — rekomendasi saja, user eksekusi manual
+  - Modul: `lp-scorer.js` (engine) + `lp-format.js` (formatter)
+  - Universal: EVM (semua chain) & Solana
+
+---
+
 ## [v2.2] — 2026-10-11
 
 ### ✨ Fitur Baru

@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url';
 import { Connection, PublicKey } from '@solana/web3.js';
 import { startApiServer } from './api-server.js';
 import { runCaAnalysis } from './ca-format.js';
+import { runLpDecision } from './lp-format.js';
 
 const DLMM_API      = 'https://dlmm.datapi.meteora.ag';
 const __dirname     = path.dirname(fileURLToPath(import.meta.url));
@@ -529,6 +530,7 @@ async function pollTgCommands() {
           '  /changelog  — Riwayat update fitur\\n' +
           '  /i &lt;pool&gt;  — 📊 Chart indicators (RSI, ST, MACD, BB)\\\\n' +
           '  /ca &lt;addr&gt; — 🔎 Analisa token dari CA (EVM/Solana)\\\\n' +
+          '  /lp &lt;addr&gt; — 🎯 Skor kelayakan LP + parameter posisi\\\\n' +
           '  /top        — Top 5 wallet by PnL\\n' +
           '  /help       — Pesan ini\\n\\n' +
           '👛 Total LP: <b>'+lpWallets.size+'</b>',
@@ -606,6 +608,16 @@ async function pollTgCommands() {
       }
       else if (text.startsWith('/ca ')) {
         runCaAnalysis({ addr: text.slice(4).trim(), send: (t) => tgReply(chat, t) });
+      }
+      // ── LP Decision (universal scorer) ────────────────────────────
+      else if (text === '/lp') {
+        tgReply(chat, '🎯 <b>LP Decision</b>\nGunakan: <code>/lp &lt;contract_address&gt;</code>\nMenilai kelayakan LP + parameter posisi (size, range, SL/TP).\nEVM & Solana.\nContoh: /lp 0xbc2283d12b1f2f46c1613ae672e95c55b69ca414');
+      }
+      else if (text.startsWith('/lp ')) {
+        const parts = text.slice(4).trim().split(/\s+/);
+        const addr = parts[0];
+        const sizeSol = parts[1] ? parseFloat(parts[1]) : 1.0;
+        runLpDecision({ addr, send: (t) => tgReply(chat, t), maxSize: Number.isFinite(sizeSol) ? sizeSol : 1.0 });
       }
       // Auto-detect EVM contract address (0x…40 hex)
       else if (/^0x[a-fA-F0-9]{40}$/.test(text)) {
